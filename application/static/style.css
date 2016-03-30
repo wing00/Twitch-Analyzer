@@ -1,0 +1,11 @@
+html            { height:100%; language:en; }
+body            { height:100%; font-family: sans-serif; background: #eee; }
+a, h1, h2       { color: #377ba8; text-align: center; }
+h1, h2, p       { font-family: 'Georgia', serif; margin: 0; }
+h1              { border-bottom: 2px solid #eee; }
+h2              { font-size: 1.2em; text-align: center; }
+
+.content        { margin:0 auto -4em; min-height:100%; }
+.push           { height:4em; clear:both;}
+.footer         { height:4em; clear:both; font-size: x-small; text-align: center; }
+

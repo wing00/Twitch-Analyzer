@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Title{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
+    <script src="plotly-latest.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    {%  include 'plots.html' %}
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}

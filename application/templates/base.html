@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block header %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div class="content">{% block content %}{% endblock %}
+        <div class="push"></div>
+    </div>
+    <div class="footer">{% block footer %}{% endblock %}</div>
+</body>
+
+</html>
