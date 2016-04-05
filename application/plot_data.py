@@ -1,16 +1,8 @@
 import db_connect
 import plotly
-from time import sleep
-
-def create_html_base(table_name):
-    table_name + ['all_time', 'time_series']
-    for table in table_name:
-        f = open('templates/' + table + '.html', mode='w+')
-        f.write('test')
-        f.close()
 
 
-def create_plot_table(table_name, cur, online=False):
+def create_plot_table(table_name, online=False):
     """ generating pie chart for table
 
     :param table_name: (str) name of table
@@ -18,6 +10,9 @@ def create_plot_table(table_name, cur, online=False):
     :param online: (boolean) flag for plot.ly online plots
     :return: None
     """
+
+    conn = db_connect.connect()
+    cur = conn.cursor()
 
     param = dict(
         name=table_name,
@@ -46,8 +41,9 @@ def create_plot_table(table_name, cur, online=False):
     ''' % param
 
     cur.execute(query)
-
     rows = cur.fetchall()
+    conn.close()
+
     label, values = zip(*rows)
 
     data = [dict(
@@ -64,15 +60,22 @@ def create_plot_table(table_name, cur, online=False):
 
     fig = dict(data=data, layout=layout)
 
+    try:
+        plotly.plotly.image.save_as(fig, filename='static/img/plots/' + table_name, format='png')
+    except:
+        print('error', table_name)
+        pass
+
     div = plotly.offline.plot(fig, output_type='div')
+    with open('templates/plots/' + table_name + '.html', mode='w+') as f:
+        f.write(div)
+
     if online:
         url = plotly.plotly.plot(fig, filename=table_name)
         print(plotly.tools.get_embed(url))
-    return div
 
 
-
-def create_plot_all_time(cur, online=False):
+def create_plot_all_time(online=False):
     """ getting viewer distribution data and plotting
 
     :param cur: (object) cursor object for sqldb
@@ -80,6 +83,8 @@ def create_plot_all_time(cur, online=False):
     :return: None
     """
 
+    conn = db_connect.connect()
+    cur = conn.cursor()
     cur.execute('''SELECT name, viewer_total FROM game_name''')
     rows = cur.fetchall()
 
@@ -97,20 +102,27 @@ def create_plot_all_time(cur, online=False):
 
     fig = dict(data=data, layout=layout)
 
+    plotly.plotly.image.save_as(fig, filename='static/img/plots/alltime', format='png')
     div = plotly.offline.plot(fig, output_type='div')
+    with open('templates/plots/alltime.html', mode='w+') as f:
+        f.write(div)
+
     if online:
         url = plotly.plotly.plot(fig, filename='All Time')
         print(plotly.tools.get_embed(url))
-    return div
+
+    conn.close()
 
 
-def create_plot_time_series(cur, online=False):
+def create_plot_time_series(online=False):
     """ getting time series data and plotting
 
     :param cur: (object) cursor object for sqldb
     :param online: (boolean) flag for plot.ly online plots
     :return: None
     """
+    conn = db_connect.connect()
+    cur = conn.cursor()
     cur.execute('''
                 SELECT name, viewers, stamp FROM snapshot
                 ORDER BY name, stamp ASC
@@ -149,36 +161,25 @@ def create_plot_time_series(cur, online=False):
     fig = dict(data=data, layout=layout)
 
     div = plotly.offline.plot(fig, output_type='div')
+    with open('templates/plots/timeseries.html', mode='w+') as f:
+        f.write(div)
+
+    plotly.plotly.image.save_as(fig, filename='static/img/plots/timeseries', format='png')
     if online:
         url = plotly.plotly.plot(fig, filename='Time Series')
         print(plotly.tools.get_embed(url))
-    return div
+
+    conn.close()
 
 
-def main():
-    conn = db_connect.connect()
-    cur = conn.cursor()
+if __name__ == '__main__':
 
-    table_names = ['rating', 'franchise', 'publisher', 'platform', 'genre', 'theme']
-
-    f = open('templates/plots.html', mode='w+')
-
+  #  table_names = ['publisher', 'franchise', 'rating', 'platform', 'genre', 'theme']
+    table_names = ['franchise']
     for name in table_names:
-        div = create_plot_table(name, cur)
-        f.write(div)
-    div = create_plot_all_time(cur)
-    f.write(div)
-    conn.close()
+        create_plot_table(name)
 
-    conn = db_connect.connect()
-    cur = conn.cursor()
-    div = create_plot_time_series(cur)
-    f.write(div)
-    f.close()
-    conn.close()
-
+   # create_plot_all_time()
+   # create_plot_time_series()
 
     print("success")
-
-
-main()

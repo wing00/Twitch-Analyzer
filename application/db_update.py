@@ -1,22 +1,12 @@
 import db_connect
 
 
-def main():
+if __name__ == '__main__':
 
-    twitch = db_connect.Twitch()
-    giantbomb = db_connect.Giantbomb()
+    data = db_connect.Twitch.run_fields()
 
-    conn = db_connect.connect()
-    cur = conn.cursor()
-
-    trialid = db_connect.get_trialid(cur)
-
-    for index, row in enumerate(twitch.fields):
-        db_connect.update_table(row, trialid, giantbomb, cur)
+    for index, row in enumerate(data):
+        db_connect.update_table(row)
         print(index)
 
-    conn.commit()
-    conn.close()
-
-main()
 

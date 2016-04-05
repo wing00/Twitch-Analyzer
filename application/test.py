@@ -1,18 +1,19 @@
 import db_connect
-import pandas
 
 conn = db_connect.connect()
 cur = conn.cursor()
 
-query = '''SELECT * FROM snapshot
-           ORDER BY STAMP DESC
-'''
 
-cur.execute(query)
-fetch = cur.fetchall()
-test = pandas.DataFrame(fetch)
+cur.execute('''DROP TABLE team
 
+''')
 
-print test
+cur.execute('''CREATE TABLE team
+    (TEAMID            BIGINT  PRIMARY KEY  NOT NULL,
+     CHANNELID         BIGINT               NOT NULL,
+     TEAMNAME          TEXT                  NULL
+    );
+''')
+
+conn.commit()
 conn.close()
-

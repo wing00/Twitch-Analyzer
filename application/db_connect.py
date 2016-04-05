@@ -4,6 +4,7 @@ import re
 import requests
 from application import app
 
+HTTP_RE = re.compile(r'http://')
 
 def connect():
     """  db connection for psql
@@ -21,11 +22,14 @@ def connect():
     return conn
 
 
-def get_trialid(cur):
+def get_trialid():
     """ fetches highest trial id number
 
     :return: (int) trial id
     """
+
+    conn = connect()
+    cur = conn.cursor()
 
     cur.execute('''SELECT trialid FROM snapshot ORDER BY trialid DESC LIMIT 1''')
     trialid = cur.fetchone()
@@ -34,10 +38,12 @@ def get_trialid(cur):
     else:
         trialid = 1
 
+    conn.close()
+
     return trialid
 
 
-def update_table(row, trialid, giantbomb, cur):
+def update_table(row):
     """ checking and updating db with game info from giantbomb
 
     :param row: (dict) dict of twitch json object
@@ -47,7 +53,11 @@ def update_table(row, trialid, giantbomb, cur):
     :rtype: object
     """
 
-    giantbomb.check_db(row['name'], row['giantbombid'])
+    conn = connect()
+    cur = conn.cursor()
+
+    trialid = get_trialid()
+    Giantbomb.check(row['name'], row['giantbombid'])
     row['trialid'] = trialid + 1
 
     # adding values into snapshot table
@@ -91,16 +101,92 @@ def update_table(row, trialid, giantbomb, cur):
                 END
                 $do$
             '''
-    cur.execute(query, row)
 
+    cur.execute(query, row)
+    conn.commit()
+    conn.close()
+
+
+def update_stream_table(row):
+    conn = connect()
+    cur = conn.cursor()
+
+    query = '''
+        INSERT INTO stream VALUES (
+            %(stream_id)s,
+            %(channel_id)s,
+            %(url)s,
+            %(language)s,
+            %(scheduled)s,
+            %(featured)s,
+            %(mature)s,
+            %(partner)s,
+            %(sponsored)s,
+            %(game)s,
+            %(viewers)s,
+            %(followers)s,
+            %(total_views)s,
+            %(video_count)s,
+            %(team_count)s,
+            current_timestamp
+          )'''
+    cur.execute(query, row)
+    conn.close()
+
+
+def update_team_table(row):
+    if not row:
+        return
+
+    conn = connect()
+    cur = conn.cursor()
+
+    query = '''
+            INSERT INTO team VALUES (
+                %(channel_id)s,
+                %(team_id)s,
+                %(team_name)s
+              )'''
+    cur.execute(query, row)
+    conn.close()
+
+
+def update_video_table(row):
+    if not row:
+        return
+
+    conn = connect()
+    cur = conn.cursor()
+    query = '''
+            INSERT INTO featured VALUES (
+                DEFAULT,
+                 %(channel_id)s,
+                 %(video_id)s,
+                 %(video_title)s,
+                 %(video_game)s,
+                 %(video_status)s,
+                 %(video_type)s,
+                 %(video_views)s,
+                 %(video_url)s,
+                 %(video_res)s,
+                 %(video_length)s,
+                 %(video_desc)s,
+                current_timestamp
+              )'''
+    cur.execute(query, row)
+    conn.close()
 
 class Twitch:
     """twitch API"""
 
     def __init__(self):
         self.token = app.config['TWITCH_API']
-        self.fields = self.set_fields
-        self.streams = self.set_streams
+        self.fields = None
+        self.streams = None
+        self.teams = None
+        self.videos = None
+        self.featured = None
+        self.featured_teams = None
 
     @property
     def set_fields(self):
@@ -134,15 +220,113 @@ class Twitch:
                 fields.append(row)
             offset += 100
 
-        return fields
+        self.fields = fields
+
+    @classmethod
+    def run_fields(cls):
+        test = cls()
+        test.set_fields
+        return test.fields
+
+    # def get_videos(self):
+    #     offset = 0
+    #     video_rows = []
+    #
+    #     if videos_count:
+    #         while offset < videos_count:
+    #             videos = requests.get(channel['_links']['videos'], params=dict(limit=100, offset=offset),
+    #                                   headers=headers).json()
+    #             for video in videos['videos']:
+    #                 video_row = dict(channel_id=channel['_id'],
+    #                                  video_id=video['_id'],
+    #                                  video_type=video['broadcast_type'],
+    #                                  video_title=video['title'],
+    #                                  video_game=video['game'],
+    #                                  video_desc=video['description'],
+    #                                  video_status=video['status'],
+    #                                  video_views=video['views'],
+    #                                  video_url=video['url'],
+    #                                  video_res=video['resolutions'],
+    #                                  video_length=video['length']
+    #                                  )
+    #
+    #                 video_rows.append(video_row)
 
     @property
     def set_streams(self):
-
         headers = {'client-id': self.token}
-        data = requests.get('https://api.twitch.tv/kraken/streams/featured', params=dict(limit=1), headers=headers).json()
+        data = requests.get('https://api.twitch.tv/kraken/streams', headers=headers).json()
+        streams_total = data['_total']
+
+        offset = 0
 
         fields = []
+        team_fields = []
+        while offset < streams_total:
+            print 'getting offset:', offset
+            data = requests.get('https://api.twitch.tv/kraken/streams', params=dict(limit=100, offset=offset), headers=headers).json()
+            if not data['streams']:
+                break
+
+            for index, field in enumerate(data['streams']):
+                channel = field['channel']
+                row = dict(sponsored=False,
+                           scheduled=False,
+                           featured=False,
+
+                           game=field['game'],
+                           viewers=field['viewers'],
+                           stream_id=field['_id'],
+
+                           mature=channel['mature'],
+                           language=channel['broadcaster_language'],
+                           channel_id=channel['_id'],
+                           partner=channel['partner'],
+                           url=channel['url'],
+                           total_views=channel['views'],
+                           followers=channel['followers'],
+                           )
+                team_url = HTTP_RE.sub(r'https://', channel['_links']['teams'])
+                teams = requests.get(team_url, params=dict(limit=100), headers=headers).json()
+
+                team_count = 0
+                if teams['teams']:
+                    for team in teams['teams']:
+                        team_row = dict(channel_id=channel['_id'],
+                                        team_id=team['_id'],
+                                        team_name=team['display_name'])
+                        team_fields.append(team_row)
+                    team_count = len(teams['teams'])
+
+                video_url = HTTP_RE.sub(r'https://', channel['_links']['videos'])
+
+                videos = requests.get(video_url, headers=headers).json()
+                video_count = videos['_total'] if videos['_total'] else 0
+
+                row.update(dict(video_count=video_count,
+                                team_count=team_count))
+
+                fields.append(row)
+            offset += 100
+
+        self.streams = fields
+        self.teams = team_fields
+
+    @classmethod
+    def run_streams(cls):
+        test = cls()
+        test.set_streams
+        return test.streams, test.teams
+
+
+    @property
+    def set_featured(self):
+
+        headers = {'client-id': self.token}
+        data = requests.get('https://api.twitch.tv/kraken/streams/featured', params=dict(limit=100), headers=headers).json()
+
+        fields = []
+        team_fields = []
 
         for index, field in enumerate(data['featured']):
             stream = field['stream']
@@ -150,6 +334,7 @@ class Twitch:
 
             row = dict(sponsored=field['sponsored'],
                        scheduled=field['scheduled'],
+                       featured=True,
 
                        game=stream['game'],
                        viewers=stream['viewers'],
@@ -164,9 +349,33 @@ class Twitch:
                        followers=channel['followers'],
                        )
 
+            teams = requests.get(channel['_links']['teams'], params=dict(limit=100), headers=headers).json()
+            team_count = 0
+
+            if teams['teams']:
+                for team in teams['teams']:
+                    team_row = dict(channel_id=channel['_id'],
+                                    team_id=team['_id'],
+                                    team_name=team['display_name'])
+                    team_fields.append(team_row)
+                team_count = len(teams['teams'])
+
+            videos = requests.get(channel['_links']['videos'], headers=headers).json()
+            video_count = videos['_total'] if videos['_total'] else 0
+
+            row.update(dict(video_count=video_count,
+                            team_count=team_count))
+
             fields.append(row)
 
-        return fields
+        self.featured = fields
+        self.featured_teams = team_fields
+
+    @classmethod
+    def run_featured(cls):
+        test = cls()
+        test.set_featured
+        return test.featured, test.featured_teams
 
 
 class Giantbomb:
@@ -185,7 +394,7 @@ class Giantbomb:
         # populating db_ids and mismatch_ids from db
         self.db_ids = []
         self.mismatch_ids = []
-        self.set_ids()
+        self.set_ids
 
     def search_web(self, name, giantbombid):
         """ accesses giantbomb api for search query and returns api if giantbombid matches
@@ -241,13 +450,11 @@ class Giantbomb:
 
         url = 'http://giantbomb.com/api/search/'
         headers = self.header
-
-        param = dict(
-            format='json',
-            resources='game',
-            api_key=self.token,
-            query=name
-        )
+        param = dict(format='json',
+                     resources='game',
+                     api_key=self.token,
+                     query=name
+                     )
         fields = requests.get(url, params=param, headers=headers).json()
 
         if fields['results']:
@@ -292,6 +499,7 @@ class Giantbomb:
 
         return giantbombid
 
+    @property
     def set_ids(self):
         """ populates db_ids with giantbombids for searching
 
@@ -305,13 +513,14 @@ class Giantbomb:
         fetch = cur.fetchall()
         fetch = [item[0] for item in fetch]
         self.db_ids = fetch
+        conn.close()
 
-
+        conn = connect()
+        cur = conn.cursor()
         query = '''SELECT giantbombid, name FROM mismatch'''
         cur.execute(query)
         fetch = cur.fetchall()
         self.mismatch_ids = fetch
-
         conn.close()
 
     def check_db(self, name, giantbombid):
@@ -322,7 +531,6 @@ class Giantbomb:
         :param giantbombid: (int) id of game
         :return: None
         """
-
         if giantbombid == 0:
             giantbombid = self.search_mismatch(name)
 
@@ -332,10 +540,14 @@ class Giantbomb:
 
             if api:
                 self.add_db(api, name)
-                self.db_ids.append(giantbombid)
             else:
                 self.add_db_no_api(name, giantbombid)
             print('added ' + name + ' to giantbomb table')
+
+    @classmethod
+    def check(cls, name, giantbombid):
+        checker = cls()
+        checker.check_db(name, giantbombid)
 
     @staticmethod
     def add_db_no_api(name, giantbombid):
@@ -461,4 +673,11 @@ class Giantbomb:
         cur.execute(query)
         fetch = cur.fetchall()
         print(fetch)
+
+if __name__ == '__main__':
+    # Twitch.run_fields()
+    # Twitch.run_featured()
+    data = Twitch.run_streams()
+    print len(data)
+
 

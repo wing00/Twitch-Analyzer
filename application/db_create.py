@@ -139,6 +139,40 @@ cur.execute('''CREATE TABLE giantbomb
         );
 ''')
 
+cur.execute('''CREATE TABLE mismatch
+    (MISMATCHID         SERIAL  PRIMARY KEY  NOT NULL,
+     NAME               TEXT                 NOT NULL,
+     GIANTBOMBID        INT                  NOT NULL
+    );
+''')
+
+cur.execute('''CREATE TABLE stream
+    (STREAMID         BIGINT   PRIMARY KEY       NOT NULL,
+     CHANNELID        INT                     NOT NULL,
+     URL              TEXT                    NOT NULL,
+     LANGUAGE         SERIAL                  NOT NULL,
+     SCHEDULED        BOOLEAN                 NOT NULL,
+     FEATURED         BOOLEAN                 NOT NULL,
+     MATURE           BOOLEAN                 NOT NULL,
+     PARTNER          BOOLEAN                 NOT NULL,
+     SPONSORED        BOOLEAN                 NOT NULL,
+     GAME             TEXT                    NOT NULL,
+     VIEWERS          INT                     NOT NULL,
+     FOLLOWERS        INT                     NOT NULL,
+     TOTALVIEWS       INT                     NOT NULL,
+     VIDEOS           INT                     NOT NULL,
+     TEAMS            INT                     NULL,
+     STAMP           TIMESTAMP                NOT NULL
+     );
+''')
+
+cur.execute('''CREATE TABLE team
+    (TEAMID            BIGINT  PRIMARY KEY  NOT NULL,
+     CHANNELID         BIGINT               NOT NULL,
+     TEAMNAME          TEXT                  NULL
+    );
+''')
+
 conn.commit()
 conn.close()
 print('success')
