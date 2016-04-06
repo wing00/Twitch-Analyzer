@@ -131,6 +131,7 @@ def update_stream_table(row):
             current_timestamp
           )'''
     cur.execute(query, row)
+    conn.commit()
     conn.close()
 
 
@@ -140,14 +141,22 @@ def update_team_table(row):
 
     conn = connect()
     cur = conn.cursor()
+    query = '''SELECT channelid, teamid FROM team
+               WHERE channelid = %(channel_id)s AND teamid = %(team_id)s'''
+    cur.execute(query, row)
+    fetch = cur.fetchone()
 
-    query = '''
+    if fetch is None:
+        query = '''
             INSERT INTO team VALUES (
                 %(channel_id)s,
                 %(team_id)s,
-                %(team_name)s
+                %(team_name)s,
+                current_timestamp
               )'''
-    cur.execute(query, row)
+        cur.execute(query, row)
+        conn.commit()
+
     conn.close()
 
 
@@ -174,6 +183,7 @@ def update_video_table(row):
                 current_timestamp
               )'''
     cur.execute(query, row)
+    cur.commit()
     conn.close()
 
 class Twitch:

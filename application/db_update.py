@@ -34,6 +34,7 @@ def featured():
         db_connect.update_team_table(row)
         print index
 
+
 def parse_options():
     parser = ArgumentParser()
     parser.add_argument('-s', '--stream', default=False, action='store_true')
@@ -50,6 +51,7 @@ if __name__ == '__main__':
         stream()
     if options.featured:
         featured()
+
 
 
 

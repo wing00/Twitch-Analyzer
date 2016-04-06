@@ -167,7 +167,7 @@ cur.execute('''CREATE TABLE stream
 ''')
 
 cur.execute('''CREATE TABLE team
-    (TEAMID            BIGINT  PRIMARY KEY  NOT NULL,
+    (TEAMID            BIGINT               NOT NULL,
      CHANNELID         BIGINT               NOT NULL,
      TEAMNAME          TEXT                  NULL
     );
