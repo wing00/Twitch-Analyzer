@@ -1,9 +1,10 @@
 import psycopg2
 from psycopg2.extensions import AsIs
+from application import app
+from argparse import ArgumentParser
+from multiprocessing import Pool
 import re
 import requests
-from application import app
-from multiprocessing import Pool
 
 HTTP_RE = re.compile(r'http://')
 
@@ -32,9 +33,9 @@ def get_trialid():
 
     conn = connect()
     cur = conn.cursor()
-
     cur.execute('''SELECT trialid FROM snapshot ORDER BY trialid DESC LIMIT 1''')
     trialid = cur.fetchone()
+
     if trialid:
         trialid = trialid[0]
     else:
@@ -82,7 +83,9 @@ def update_table(row):
                 DO
                 $do$
                 BEGIN
-                    IF EXISTS(SELECT * FROM game_name WHERE name = %(name)s) THEN
+                    IF EXISTS(SELECT * FROM game_name
+                                  WHERE name = %(name)s)
+                    THEN
                         UPDATE game_name
                             SET viewer_total = viewer_total + %(viewers)s,
                                 channel_total = channel_total + %(channels)s,
@@ -151,7 +154,8 @@ def update_team_table(row):
     conn = connect()
     cur = conn.cursor()
     query = '''SELECT channelid, teamid FROM team
-               WHERE channelid = %(channel_id)s AND teamid = %(team_id)s'''
+               WHERE channelid = %(channel_id)s
+                  AND teamid = %(team_id)s'''
 
     cur.execute(query, row)
     fetch = cur.fetchone()
@@ -211,8 +215,9 @@ def games_wrap(offset):
                         params=dict(
                             limit=100,
                             offset=offset
-                        ),
-                        headers=app.config['TWITCH_API']).json()
+                            ),
+                        headers=app.config['TWITCH_API']
+                        ).json()
 
 
 def stream_wrap(offset):
@@ -246,6 +251,12 @@ def video_wrap(params):
 
 
 def get_team_row(url, channel_id):
+    """ accesses team api link of channel and updates the table row with the information
+
+    :param url: api link of channel's team
+    :param channel_id: channel id number
+    :return: number of teams
+    """
     team_url = HTTP_RE.sub(r'https://', url)
     teams = requests.get(team_url,
                          params=dict(limit=100),
@@ -258,7 +269,7 @@ def get_team_row(url, channel_id):
                 channel_id=channel_id,
                 team_id=team['_id'],
                 team_name=team['display_name']
-            )
+                )
             update_team_table(team_row)
         return len(teams['teams'])
 
@@ -266,6 +277,11 @@ def get_team_row(url, channel_id):
 
 
 def get_stream_row(field):
+    """extracts information from json into a dict
+
+    :param field: json object for channel information
+    :return: dict of relevant information from json
+    """
     channel = field['channel']
     row = dict(
         sponsored=False,
@@ -299,6 +315,12 @@ def get_stream_row(field):
 
 
 def get_featured_row(field):
+    """extracts information from json into a dict for featured streams
+       extra level of information needs processing
+
+    :param field: json object for channel information
+    :return: dict of relevant information from json
+        """
     stream = field['stream']
     channel = stream['channel']
 
@@ -318,12 +340,14 @@ def get_featured_row(field):
         url=channel['url'],
         total_views=channel['views'],
         followers=channel['followers']
-    )
+        )
 
     team_count = get_team_row(channel['_links']['teams'], channel['_id'])
 
     video_url = HTTP_RE.sub(r'https://', channel['_links']['videos'])
-    videos = requests.get(video_url, headers=app.config['TWITCH_API']).json()
+    videos = requests.get(video_url,
+                          headers=app.config['TWITCH_API']
+                          ).json()
     video_count = videos['_total'] if videos['_total'] else 0
 
     row.update(dict(
@@ -335,6 +359,11 @@ def get_featured_row(field):
 
 
 def get_video_row(params):
+    """extracts information from json into a dict
+
+    :param field: json object for channel information
+    :return: dict of relevant information from json
+    """
     video, channel_id = params
     video_row = dict(
         channel_id=channel_id,
@@ -557,7 +586,8 @@ class Giantbomb:
         if not giantbombid:
             print('no match found')
 
-            query = '''SELECT giantbombid FROM giantbomb ORDER BY giantbombid DESC'''
+            query = '''SELECT giantbombid FROM giantbomb
+                          ORDER BY giantbombid DESC'''
             cur.execute(query)
             fetch = cur.fetchone()
 
@@ -595,7 +625,7 @@ class Giantbomb:
 
         conn.close()
 
-        conn.connect()
+        conn = connect()
         cur = conn.cursor()
         query = '''SELECT giantbombid, name FROM mismatch'''
         cur.execute(query)
@@ -640,7 +670,10 @@ class Giantbomb:
         conn = connect()
         cur = conn.cursor()
 
-        query = '''INSERT INTO giantbomb VALUES (%(giantbombid)s, %(name)s) '''
+        query = '''INSERT INTO giantbomb VALUES (
+                      %(giantbombid)s,
+                      %(name)s
+                      ) '''
         cur.execute(query, dict(giantbombid=giantbombid, name=name))
 
         conn.commit()
@@ -727,7 +760,11 @@ class Giantbomb:
 
                 # adding to resourcebomb table
                 query = '''
-                  INSERT INTO %(tablebombname)s VALUES(DEFAULT, %(id)s, %(giantbombid)s)
+                  INSERT INTO %(tablebombname)s VALUES(
+                                                  DEFAULT,
+                                                  %(id)s,
+                                                  %(giantbombid)s
+                                                  )
                 '''
                 cur.execute(query, data)
 
@@ -736,8 +773,14 @@ class Giantbomb:
                   DO
                   $do$
                   BEGIN
-                      IF NOT EXISTS(SELECT * FROM %(tablename)s WHERE %(tablename)s = %(name)s) THEN
-                         INSERT INTO %(tablename)s VALUES(%(id)s, %(name)s);
+                      IF NOT EXISTS(SELECT * FROM %(tablename)s
+                                        WHERE %(tablename)s = %(name)s
+                                        )
+                      THEN
+                         INSERT INTO %(tablename)s VALUES(
+                                                      %(id)s,
+                                                      %(name)s
+                                                      );
                       END IF;
                   END
                   $do$
@@ -755,11 +798,30 @@ class Giantbomb:
         :return:
         """
 
-        query = '''SELECT * FROM game_name WHERE giantbombid = %s''' % giantbombid
+        query = '''SELECT * FROM game_name
+                              WHERE giantbombid = %s''' % giantbombid
         cur.execute(query)
         fetch = cur.fetchall()
         print(fetch)
 
 
+def parse_options():
+    """ Flags to control which functions to run
+    """
+    parser = ArgumentParser()
+
+    parser.add_argument('-t', '--stream', default=False, action='store_true')
+    parser.add_argument('-f', '--featured', default=False, action='store_true')
+    parser.add_argument('-g', '--games', default=False, action='store_true')
+
+    return parser.parse_args()
+
 if __name__ == '__main__':
-    Twitch.run_featured()
+    options = parse_options()
+
+    if options.games:
+        Twitch.run_fields()
+    if options.stream:
+        Twitch.run_streams()
+    if options.featured:
+        Twitch.run_featured()
