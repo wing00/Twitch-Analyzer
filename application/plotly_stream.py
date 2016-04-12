@@ -45,7 +45,8 @@ def create_stream_plot(stream_ids, online):
     fig = dict(data=data, layout=layout)
     if online:
         url = plotly.plotly.plot(fig, filename='live_stream')
-        print(plotly.tools.get_embed(url))
+        with open('/templates/plots/live_stream.html', mode='wb+') as f:
+            f.write(plotly.tools.get_embed(url))
     return stream
 
 
@@ -79,13 +80,9 @@ def stream_data(stream_ids, stream):
             print(counter)
 
 
-def main():
+if __name__ == '__main__':
     stream_ids = plotly.tools.get_credentials_file()['stream_ids']
     if not stream_ids:
         set_plotly_creds()
     stream = create_stream_plot(stream_ids, online=True)
     stream_data(stream_ids, stream)
-
-
-if __name__ == '__main__':
-    main()
