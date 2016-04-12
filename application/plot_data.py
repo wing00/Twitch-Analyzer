@@ -45,7 +45,7 @@ def create_plot_table(table_name, online=False):
     conn.close()
 
     label, values = zip(*rows)
-
+    print label, values
     data = [dict(
             labels=label,
             values=values,
@@ -64,7 +64,7 @@ def create_plot_table(table_name, online=False):
         plotly.plotly.image.save_as(fig, filename='static/img/plots/' + table_name, format='png')
     except:
         print('error', table_name)
-        pass
+
 
     div = plotly.offline.plot(fig, output_type='div')
     with open('templates/plots/' + table_name + '.html', mode='w+') as f:

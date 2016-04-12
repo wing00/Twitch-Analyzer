@@ -147,7 +147,8 @@ cur.execute('''CREATE TABLE mismatch
 ''')
 
 cur.execute('''CREATE TABLE stream
-    (STREAMID         BIGINT   PRIMARY KEY       NOT NULL,
+    (DEFAULT          SERIAL PRIMARY KEY      NOT NULL,
+     STREAMID         BIGINT                  NOT NULL,
      CHANNELID        INT                     NOT NULL,
      URL              TEXT                    NOT NULL,
      LANGUAGE         SERIAL                  NOT NULL,
@@ -169,7 +170,8 @@ cur.execute('''CREATE TABLE stream
 cur.execute('''CREATE TABLE team
     (TEAMID            BIGINT               NOT NULL,
      CHANNELID         BIGINT               NOT NULL,
-     TEAMNAME          TEXT                  NULL
+     TEAMNAME          TEXT                  NULL,
+     STAMP             TIMESTAMP             NOT NULL
     );
 ''')
 

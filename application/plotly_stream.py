@@ -87,4 +87,5 @@ def main():
     stream_data(stream_ids, stream)
 
 
-main()
+if __name__ == '__main__':
+    main()
