@@ -7,13 +7,11 @@ from functools import partial
 conn = db_connect.connect()
 cur = conn.cursor()
 
-cur.execute('''SELECT * FROM stream''')
+cur.execute('''SELECT * FROM publisher WHERE publisherid = 2189
+''')
 fetch = cur.fetchall()
 print fetch
 
 # conn.commit()
 conn.close()
-
-
-print (u'test' + u'\xf6')
 
