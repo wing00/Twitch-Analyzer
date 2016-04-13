@@ -11,5 +11,9 @@ cur.execute('''SELECT * FROM stream''')
 fetch = cur.fetchall()
 print fetch
 
-conn.commit()
+# conn.commit()
 conn.close()
+
+
+print (u'test' + u'\xf6')
+

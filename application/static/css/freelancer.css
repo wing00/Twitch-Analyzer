@@ -80,9 +80,8 @@ hr.star-primary:after {
 }
 
 header {
-    text-align: center;
-    color: #fff;
-    background: #18bc9c;
+    text-align: left;
+    background: #dddddd;
 }
 
 header .container {
@@ -93,6 +92,7 @@ header .container {
 header img {
     display: block;
     margin: 0 auto 20px;
+
 }
 
 header .intro-text .name {

@@ -643,13 +643,13 @@ class Giantbomb:
 
         if giantbombid not in self.db_ids:
             api = self.search_web(name, giantbombid)
-            print(giantbombid, unicode(name))
+            print(giantbombid, name)
 
             if api:
                 self.add_db(api, name)
             else:
                 self.add_db_no_api(name, giantbombid)
-            print('added ' + unicode(name) + ' to giantbomb table')
+            print(u'added ' + name + u' to giantbomb table')
 
     @classmethod
     def check(cls, name, giantbombid):
