@@ -2,12 +2,13 @@
 
 
 {% block head %}
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" >
     <link rel="stylesheet" href="{{ url_for('static', filename='css/freelancer.css') }}" >
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" >
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -39,15 +40,15 @@
                     <li class="page-scroll">
                         <a href="#description">Why</a>
                     </li>
+                    <li class="page-scroll">
+                        <a href="#about">First Steps</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Features</a>
+                    </li>
 
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="#future">Future</a>
                     </li>
                 </ul>
             </div>

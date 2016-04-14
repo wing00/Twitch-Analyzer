@@ -11,7 +11,7 @@ def set_plotly_creds():
 
     :return: None
     """
-
+    plotly.tools.set_credentials_file(username=app.config['PLOTLY_NAME'], api_key=app.config['PLOTLY_API'])
     plotly.tools.set_credentials_file(app.config['STREAM_KEY'])
 
 

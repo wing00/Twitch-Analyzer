@@ -1,29 +1,34 @@
 {% extends 'base.html' %}
 
 {% block title %}Twitch Ex Machina{% endblock %}
+
 {% block content %}
 
-<header>
-    {% include 'header.html' %}
-</header>
+    <header>
+        {% include 'header.html' %}
+    </header>
 
-<section id="description">
-    {% include 'description.html' %}
-</section>
+    <section id="description">
+        {% include 'description.html' %}
+    </section>
 
-<section id="portfolio">
-    {% include 'portfolio.html' %}
-</section>
+    <section class="success" id="about">
+        {% include 'about.html' %}
+    </section>
 
-    <!-- About Section -->
-<section class="success" id="about">
-    {% include 'about.html' %}
-</section>
+    <section id="portfolio">
+        {% include 'portfolio.html' %}
+    </section>
 
-    <!-- Contact Section -->
-<section id="contact">
-    {% include 'contact.html' %}
-</section>
+    <section class="machine" id="machine">
+        {% include 'machine.html' %}
+    </section>
+
+    <section class="future" id="future">
+        {% include 'future.html' %}
+    </section>
+
 
     {% include 'footer.html' %}
 {% endblock %}
+

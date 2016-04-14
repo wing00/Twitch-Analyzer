@@ -823,4 +823,3 @@ if __name__ == '__main__':
     if options.featured:
         Twitch.run_featured()
 
-    Twitch.run_featured()

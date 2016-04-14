@@ -181,7 +181,12 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #18bc9c;
+    background: #01225D;
+}
+
+section.future {
+    background: #ecf0f1;
+
 }
 
 section.success a,

@@ -1,12 +1,12 @@
 import db_connect
 import plotly
+from multiprocessing import Pool
 
 
 def create_plot_table(table_name, online=False):
     """ generating pie chart for table
 
     :param table_name: (str) name of table
-    :param cur: (object) cursor object for sqldb
     :param online: (boolean) flag for plot.ly online plots
     :return: None
     """
@@ -45,7 +45,6 @@ def create_plot_table(table_name, online=False):
     conn.close()
 
     label, values = zip(*rows)
-    print label, values
     data = [dict(
             labels=label,
             values=values,
@@ -54,8 +53,11 @@ def create_plot_table(table_name, online=False):
             )]
 
     layout = plotly.graph_objs.Layout(
-        title=table_name.title() + ' Distribution of All Games by Viewers',
-        showlegend=True
+        title=table_name.title() + ' By Viewers',
+        titlefont=plotly.graph_objs.Font(
+            size=48,
+        ),
+        showlegend=False
     )
 
     fig = dict(data=data, layout=layout)
@@ -64,7 +66,6 @@ def create_plot_table(table_name, online=False):
         plotly.plotly.image.save_as(fig, filename='static/img/plots/' + table_name, format='png')
     except:
         print('error', table_name)
-
 
     div = plotly.offline.plot(fig, output_type='div')
     with open('templates/plots/' + table_name + '.html', mode='w+') as f:
@@ -78,7 +79,6 @@ def create_plot_table(table_name, online=False):
 def create_plot_all_time(online=False):
     """ getting viewer distribution data and plotting
 
-    :param cur: (object) cursor object for sqldb
     :param online: (boolean) flag for plot.ly online plots
     :return: None
     """
@@ -96,7 +96,10 @@ def create_plot_all_time(online=False):
             textinfo='none'
             )]
     layout = plotly.graph_objs.Layout(
-        title='Total Viewer Distribution: All-Time ',
+        title='Games By Viewers',
+        titlefont=plotly.graph_objs.Font(
+            size=48,
+        ),
         showlegend=False
     )
 
@@ -117,15 +120,17 @@ def create_plot_all_time(online=False):
 def create_plot_time_series(online=False):
     """ getting time series data and plotting
 
-    :param cur: (object) cursor object for sqldb
     :param online: (boolean) flag for plot.ly online plots
     :return: None
     """
+
     conn = db_connect.connect()
     cur = conn.cursor()
     cur.execute('''
                 SELECT name, viewers, stamp FROM snapshot
+                WHERE stamp >= '2016-04-02'
                 ORDER BY name, stamp ASC
+
                 ''')
     rows = cur.fetchall()
 
@@ -133,6 +138,7 @@ def create_plot_time_series(online=False):
     labels = []
     viewers = []
     timestamps = []
+    count = 0
 
     for row in rows:
         if not labels:
@@ -142,10 +148,13 @@ def create_plot_time_series(online=False):
             viewers.append(row[1])
             timestamps.append(row[2])
         else:
+            count += 1
+
             trace = plotly.graph_objs.Scatter(
                 x=timestamps,
                 y=viewers,
-                name=labels
+                name=labels,
+
             )
 
             data.append(trace)
@@ -155,9 +164,12 @@ def create_plot_time_series(online=False):
             timestamps = [row[2]]
 
     layout = plotly.graph_objs.Layout(
-        title='Time Series of All Games',
+        title='Games - Time Series',
+        titlefont=plotly.graph_objs.Font(
+            size=48,
+        ),
         showlegend=False
-    )
+        )
     fig = dict(data=data, layout=layout)
 
     div = plotly.offline.plot(fig, output_type='div')
@@ -174,12 +186,11 @@ def create_plot_time_series(online=False):
 
 if __name__ == '__main__':
 
-  #  table_names = ['publisher', 'franchise', 'rating', 'platform', 'genre', 'theme']
-    table_names = ['franchise']
-    for name in table_names:
-        create_plot_table(name)
+    table_names = ['publisher', 'franchise', 'rating', 'platform', 'genre', 'theme']
 
-   # create_plot_all_time()
-   # create_plot_time_series()
+    pool = Pool()
+    pool.map(create_plot_table, table_names)
+    create_plot_all_time()
+    create_plot_time_series()
 
     print("success")
