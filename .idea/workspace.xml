@@ -2,13 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a1aca03-6fec-4892-afef-55fcd81f31b1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/img/figure_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/font-awesome/scss/font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/img/portfolio/cabin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/img/portfolio/cake.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/img/portfolio/circus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/img/portfolio/game.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/img/portfolio/safe.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/img/portfolio/submarine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/embed/alltime.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/embed/franchise.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/embed/genre.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/embed/platform.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/embed/publisher.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/embed/rating.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/embed/theme.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/img/plots/alltime.png" afterPath="$PROJECT_DIR$/application/static/img/plots/alltime.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/img/plots/franchise.png" afterPath="$PROJECT_DIR$/application/static/img/plots/franchise.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/img/plots/genre.png" afterPath="$PROJECT_DIR$/application/static/img/plots/genre.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/img/plots/platform.png" afterPath="$PROJECT_DIR$/application/static/img/plots/platform.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/img/plots/publisher.png" afterPath="$PROJECT_DIR$/application/static/img/plots/publisher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/img/plots/rating.png" afterPath="$PROJECT_DIR$/application/static/img/plots/rating.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/img/plots/theme.png" afterPath="$PROJECT_DIR$/application/static/img/plots/theme.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/img/plots/timeseries.png" afterPath="$PROJECT_DIR$/application/static/img/plots/timeseries.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/css/main.css" afterPath="$PROJECT_DIR$/application/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/about.html" afterPath="$PROJECT_DIR$/application/templates/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/base.html" afterPath="$PROJECT_DIR$/application/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/future.html" afterPath="$PROJECT_DIR$/application/templates/future.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/machine.html" afterPath="$PROJECT_DIR$/application/templates/machine.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/db_connect.py" afterPath="$PROJECT_DIR$/application/db_connect.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/db_create.py" afterPath="$PROJECT_DIR$/application/db_create.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/machine.py" afterPath="$PROJECT_DIR$/application/machine.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/plot_data.py" afterPath="$PROJECT_DIR$/application/plot_data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/index.html" afterPath="$PROJECT_DIR$/application/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/plots/alltime.html" afterPath="$PROJECT_DIR$/application/templates/plots/alltime.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/plots/franchise.html" afterPath="$PROJECT_DIR$/application/templates/plots/franchise.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/plots/genre.html" afterPath="$PROJECT_DIR$/application/templates/plots/genre.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/plots/platform.html" afterPath="$PROJECT_DIR$/application/templates/plots/platform.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/plots/publisher.html" afterPath="$PROJECT_DIR$/application/templates/plots/publisher.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/plots/rating.html" afterPath="$PROJECT_DIR$/application/templates/plots/rating.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/plots/theme.html" afterPath="$PROJECT_DIR$/application/templates/plots/theme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/plots/timeseries.html" afterPath="$PROJECT_DIR$/application/templates/plots/timeseries.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/test.html" afterPath="$PROJECT_DIR$/application/templates/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/test.py" afterPath="$PROJECT_DIR$/application/test.py" />
     </list>
     <ignored path="flask.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,12 +89,12 @@
     <SUITE FILE_PATH="coverage/flask$db_connect.coverage" NAME="db_connect Coverage Results" MODIFIED="1460486280168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/application" />
     <SUITE FILE_PATH="coverage/flask$main.coverage" NAME="main Coverage Results" MODIFIED="1456489328836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask$calculator.coverage" NAME="calculator Coverage Results" MODIFIED="1456458786146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
-    <SUITE FILE_PATH="coverage/flask$test.coverage" NAME="test Coverage Results" MODIFIED="1460579249871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/application" />
+    <SUITE FILE_PATH="coverage/flask$test.coverage" NAME="test Coverage Results" MODIFIED="1461305242737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/application" />
     <SUITE FILE_PATH="coverage/flask$models.coverage" NAME="models Coverage Results" MODIFIED="1456560314077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
     <SUITE FILE_PATH="coverage/flask$db_update.coverage" NAME="db_update Coverage Results" MODIFIED="1459959831747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/application" />
     <SUITE FILE_PATH="coverage/flask$machine.coverage" NAME="machine Coverage Results" MODIFIED="1460593805047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/application" />
     <SUITE FILE_PATH="coverage/flask$update_featured.coverage" NAME="update_featured Coverage Results" MODIFIED="1459885357368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/application" />
-    <SUITE FILE_PATH="coverage/flask$plot_data.coverage" NAME="plot_data Coverage Results" MODIFIED="1460579288132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/application" />
+    <SUITE FILE_PATH="coverage/flask$plot_data.coverage" NAME="plot_data Coverage Results" MODIFIED="1461359306863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/application" />
     <SUITE FILE_PATH="coverage/flask$flask.coverage" NAME="flask Coverage Results" MODIFIED="1456482676277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/flask$quandlapi.coverage" NAME="quandlapi Coverage Results" MODIFIED="1456478988503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock" />
   </component>
@@ -54,91 +117,95 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="435">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="freelancer.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/static/css/freelancer.css">
+      <file leaf-file-name="plot_data.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/plot_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="186" column="14" selection-start-line="186" selection-start-column="8" selection-end-line="186" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="machine.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/machine.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/static/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="portfolio.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/portfolio.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="153" column="28" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="description.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/description.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="future.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/templates/future.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+            <state relative-caret-position="2156">
+              <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
               <folding>
-                <element signature="e#968#991#0#HTML" expanded="true" />
-                <element signature="e#1071#1094#0#HTML" expanded="true" />
+                <element signature="e#0#17#0" expanded="true" />
+                <marker date="1461360012000" expanded="true" signature="506:814" placeholder="SELECT missi... missing_value" />
+                <marker date="1461360012000" expanded="true" signature="1087:1605" placeholder="SELECT platf... platformbomb" />
+                <marker date="1461360012000" expanded="true" signature="3165:3205" placeholder="SELECT name,... game_name" />
+                <marker date="1461360012000" expanded="true" signature="4665:4791" placeholder="SELECT name,... snapshot" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="machine.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/machine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+                <marker date="1461123261000" expanded="true" signature="374:507" placeholder="SELECT * fro... snapshot" />
+                <marker date="1461123261000" expanded="true" signature="374:1510" placeholder="SELECT * FRO... snapshot" />
+                <marker date="1461123261000" expanded="true" signature="1527:1553" placeholder="SELECT * FRO... " />
+                <marker date="1461123261000" expanded="true" signature="1527:1554" placeholder="SELECT * FRO... game_name" />
+                <marker date="1461123261000" expanded="true" signature="1527:1562" placeholder="SELECT stamp... snapshot" />
+                <marker date="1461123261000" expanded="true" signature="1527:1606" placeholder="SELECT stamp... snapshot" />
+                <marker date="1461123261000" expanded="true" signature="1527:1643" placeholder="SELECT stamp... snapshot" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/templates/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_connect.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/db_connect.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1091">
+              <caret line="651" column="89" selection-start-line="651" selection-start-column="89" selection-end-line="651" selection-end-column="89" />
+              <folding>
+                <marker date="1461308356000" expanded="true" signature="709:767" placeholder="SELECT trial... snapshot" />
+                <marker date="1461308356000" expanded="true" signature="1427:1722" placeholder="INSERT INTO snapshot... " />
+                <marker date="1461308356000" expanded="true" signature="2066:2405" placeholder="UPDATE game_... " />
+                <marker date="1461308356000" expanded="true" signature="3117:3586" placeholder="INSERT INTO featured... " />
+                <marker date="1461308356000" expanded="true" signature="3117:3598" placeholder="INSERT INTO featured... " />
+                <marker date="1461308356000" expanded="true" signature="3883:4008" placeholder="SELECT chann... team" />
+                <marker date="1461308356000" expanded="true" signature="4123:4290" placeholder="INSERT INTO team... " />
+                <marker date="1461308356000" expanded="true" signature="4576:5045" placeholder="INSERT INTO featured... " />
+                <marker date="1461308356000" expanded="true" signature="16598:16683" placeholder="SELECT giant... giantbomb" />
+                <marker date="1461308356000" expanded="true" signature="16984:17098" placeholder="INSERT INTO mismatch... " />
+                <marker date="1461308356000" expanded="true" signature="17453:17486" placeholder="SELECT giant... giantbomb" />
+                <marker date="1461308356000" expanded="true" signature="17715:17753" placeholder="SELECT giant... mismatch" />
+                <marker date="1461308356000" expanded="true" signature="18998:19122" placeholder="INSERT INTO giantbomb... " />
+                <marker date="1461308356000" expanded="true" signature="20295:20522" placeholder="INSERT INTO giantbomb... " />
+                <marker date="1461308356000" expanded="true" signature="21565:21837" placeholder="INSERT INTO " />
+                <marker date="1461308356000" expanded="true" signature="22923:22997" placeholder="SELECT * FRO... game_name" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <folding>
+                <marker date="1461305242000" expanded="true" signature="171:227" placeholder="UPDATE platf... " />
+                <marker date="1461305242000" expanded="true" signature="171:229" placeholder="UPDATE platf... " />
+                <marker date="1461305242000" expanded="true" signature="171:231" placeholder="UPDATE platf... " />
+                <marker date="1461305242000" expanded="true" signature="171:237" placeholder="UPDATE platf... " />
               </folding>
             </state>
           </provider>
@@ -161,7 +228,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/stock/templates/base.html" />
         <option value="$PROJECT_DIR$/stock/static/style.css" />
         <option value="$PROJECT_DIR$/stock/templates/index.html" />
         <option value="$PROJECT_DIR$/stock/templates/footer.html" />
@@ -184,13 +250,9 @@
         <option value="$PROJECT_DIR$/application/update_featured.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/application/db_update.py" />
-        <option value="$PROJECT_DIR$/application/db_create.py" />
         <option value="$PROJECT_DIR$/application/templates/header.html" />
         <option value="$PROJECT_DIR$/application/templates/description.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/application/templates/footer.html" />
-        <option value="$PROJECT_DIR$/application/db_connect.py" />
-        <option value="$PROJECT_DIR$/application/test.py" />
         <option value="$PROJECT_DIR$/application/settings.cfg" />
         <option value="$PROJECT_DIR$/application/plotly_stream.py" />
         <option value="$PROJECT_DIR$/application/templates/embed/publisher.html" />
@@ -200,18 +262,23 @@
         <option value="$PROJECT_DIR$/application/templates/embed/theme.html" />
         <option value="$PROJECT_DIR$/application/templates/embed/alltime.html" />
         <option value="$PROJECT_DIR$/application/templates/embed/platform.html" />
-        <option value="$PROJECT_DIR$/application/plot_data.py" />
-        <option value="$PROJECT_DIR$/application/templates/test.html" />
         <option value="$PROJECT_DIR$/application/templates/portfolio.html" />
         <option value="$PROJECT_DIR$/application/templates/contact.html" />
-        <option value="$PROJECT_DIR$/application/machine.py" />
-        <option value="$PROJECT_DIR$/application/templates/index.html" />
         <option value="$PROJECT_DIR$/application/static/css/main.css" />
         <option value="$PROJECT_DIR$/application/static/css/freelancer.css" />
         <option value="$PROJECT_DIR$/application/templates/machine.html" />
         <option value="$PROJECT_DIR$/application/templates/about.html" />
         <option value="$PROJECT_DIR$/application/templates/future.html" />
         <option value="$PROJECT_DIR$/application/templates/base.html" />
+        <option value="$PROJECT_DIR$/application/templates/footer.html" />
+        <option value="$PROJECT_DIR$/application/templates/asdfasdf.html" />
+        <option value="$PROJECT_DIR$/application/machine.py" />
+        <option value="$PROJECT_DIR$/application/templates/index.html" />
+        <option value="$PROJECT_DIR$/application/test.py" />
+        <option value="$PROJECT_DIR$/application/db_connect.py" />
+        <option value="$PROJECT_DIR$/application/templates/test.html" />
+        <option value="$PROJECT_DIR$/application/db_create.py" />
+        <option value="$PROJECT_DIR$/application/plot_data.py" />
       </list>
     </option>
   </component>
@@ -221,9 +288,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="29" />
+    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="955" />
+    <option name="height" value="953" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -272,8 +339,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,46 +374,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitchapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitchapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="embed" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -416,50 +443,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitchapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitchapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -467,7 +450,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../stockticker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -504,7 +487,7 @@
       <recent name="$PROJECT_DIR$/stock" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.machine">
+  <component name="RunManager" selected="Python.plot_data">
     <configuration default="false" name="db_update" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -831,9 +814,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.machine" />
-        <item index="1" class="java.lang.String" itemvalue="Python.plot_data" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.plot_data" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.machine" />
         <item index="3" class="java.lang.String" itemvalue="Python.db_connect" />
         <item index="4" class="java.lang.String" itemvalue="Python.db_update" />
       </list>
@@ -861,19 +844,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="29" width="1680" height="955" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="953" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10561661" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14774115" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="721" y="196" width="237" height="610" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616487" sideWeight="0.51159954" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18009768" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893157" sideWeight="0.497558" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32538736" sideWeight="0.4884005" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3245509" sideWeight="0.4884005" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26467067" sideWeight="0.491453" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10561661" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14957266" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="721" y="196" width="237" height="610" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18009768" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814372" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26460072" sideWeight="0.491453" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -882,7 +866,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814372" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -919,194 +902,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/update_featured.py" />
-    <entry file="file://$PROJECT_DIR$/application/update_streams.py" />
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/plots/franchise.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="9" column="10987" selection-start-line="9" selection-start-column="10987" selection-end-line="9" selection-end-column="10987" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/multiprocessing/pool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="250" column="0" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/db_update.py" />
-    <entry file="file://$PROJECT_DIR$/application/static/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1350">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="5987" column="13" selection-start-line="5987" selection-start-column="7" selection-end-line="5987" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/style.css" />
-    <entry file="file://$PROJECT_DIR$/application/static/img/twitchlogo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f1c8f5a0-17e9-4795-bb66-f89eae622659/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/scipy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/scipy/fftpack/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.1/python_stubs/923564954/datetime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="313" column="12" selection-start-line="313" selection-start-column="12" selection-end-line="313" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/plots/timeseries.html">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/img/plots/timeseries.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/db_create.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/db_connect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="814" column="0" selection-start-line="814" selection-start-column="0" selection-end-line="814" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1460571632000" expanded="true" signature="709:767" placeholder="SELECT trial... snapshot" />
-            <marker date="1460571632000" expanded="true" signature="1427:1722" placeholder="INSERT INTO snapshot... " />
-            <marker date="1460571632000" expanded="true" signature="2066:2405" placeholder="UPDATE game_... " />
-            <marker date="1460571632000" expanded="true" signature="3117:3586" placeholder="INSERT INTO featured... " />
-            <marker date="1460571632000" expanded="true" signature="3117:3598" placeholder="INSERT INTO featured... " />
-            <marker date="1460571632000" expanded="true" signature="3883:4008" placeholder="SELECT chann... team" />
-            <marker date="1460571632000" expanded="true" signature="4123:4290" placeholder="INSERT INTO team... " />
-            <marker date="1460571632000" expanded="true" signature="4576:5045" placeholder="INSERT INTO featured... " />
-            <marker date="1460571632000" expanded="true" signature="16598:16683" placeholder="SELECT giant... giantbomb" />
-            <marker date="1460571632000" expanded="true" signature="16984:17098" placeholder="INSERT INTO mismatch... " />
-            <marker date="1460571632000" expanded="true" signature="17453:17486" placeholder="SELECT giant... giantbomb" />
-            <marker date="1460571632000" expanded="true" signature="17715:17753" placeholder="SELECT giant... mismatch" />
-            <marker date="1460571632000" expanded="true" signature="18969:19093" placeholder="INSERT INTO giantbomb... " />
-            <marker date="1460571632000" expanded="true" signature="20266:20493" placeholder="INSERT INTO giantbomb... " />
-            <marker date="1460571632000" expanded="true" signature="21536:21808" placeholder="INSERT INTO " />
-            <marker date="1460571632000" expanded="true" signature="22894:22968" placeholder="SELECT * FRO... game_name" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/settings.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/plotly_stream.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/templates/embed/genre.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1156,77 +956,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/templates/embed/alltime.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/plot_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2580">
-          <caret line="174" column="4" selection-start-line="174" selection-start-column="4" selection-end-line="182" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-            <marker date="1460580680000" expanded="true" signature="487:763" placeholder="SELECT missi... missing_value" />
-            <marker date="1460580680000" expanded="true" signature="2242:2282" placeholder="SELECT name,... game_name" />
-            <marker date="1460580680000" expanded="true" signature="3336:3462" placeholder="SELECT name,... snapshot" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/img/plots/machine.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/machine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1460593815000" expanded="true" signature="374:507" placeholder="SELECT * fro... snapshot" />
-            <marker date="1460593815000" expanded="true" signature="374:1510" placeholder="SELECT * FRO... snapshot" />
-            <marker date="1460593815000" expanded="true" signature="1527:1553" placeholder="SELECT * FRO... " />
-            <marker date="1460593815000" expanded="true" signature="1527:1554" placeholder="SELECT * FRO... game_name" />
-            <marker date="1460593815000" expanded="true" signature="1527:1562" placeholder="SELECT stamp... snapshot" />
-            <marker date="1460593815000" expanded="true" signature="1527:1606" placeholder="SELECT stamp... snapshot" />
-            <marker date="1460593815000" expanded="true" signature="1527:1643" placeholder="SELECT stamp... snapshot" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/portfolio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="153" column="28" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,35 +971,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/img/figure_1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/figure_1.png" />
     <entry file="file://$PROJECT_DIR$/application/static/css/freelancer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="2790">
           <caret line="186" column="14" selection-start-line="186" selection-start-column="8" selection-end-line="186" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/machine.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/future.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
-          <folding>
-            <element signature="e#968#991#0#HTML" expanded="true" />
-            <element signature="e#1071#1094#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1286,19 +996,347 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/application/templates/future.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="360">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/portfolio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="149" column="13" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="83" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/machine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/asdfasdf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/plotly/graph_objs/graph_objs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/multiprocessing/pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="566" column="0" selection-start-line="566" selection-start-column="0" selection-end-line="566" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/plotly_stream.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/plots/machine.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200">
+          <caret line="1" column="2606" selection-start-line="1" selection-start-column="2606" selection-end-line="1" selection-end-column="2606" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/db_connect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1091">
+          <caret line="651" column="89" selection-start-line="651" selection-start-column="89" selection-end-line="651" selection-end-column="89" />
+          <folding>
+            <marker date="1461308356000" expanded="true" signature="709:767" placeholder="SELECT trial... snapshot" />
+            <marker date="1461308356000" expanded="true" signature="1427:1722" placeholder="INSERT INTO snapshot... " />
+            <marker date="1461308356000" expanded="true" signature="2066:2405" placeholder="UPDATE game_... " />
+            <marker date="1461308356000" expanded="true" signature="3117:3586" placeholder="INSERT INTO featured... " />
+            <marker date="1461308356000" expanded="true" signature="3117:3598" placeholder="INSERT INTO featured... " />
+            <marker date="1461308356000" expanded="true" signature="3883:4008" placeholder="SELECT chann... team" />
+            <marker date="1461308356000" expanded="true" signature="4123:4290" placeholder="INSERT INTO team... " />
+            <marker date="1461308356000" expanded="true" signature="4576:5045" placeholder="INSERT INTO featured... " />
+            <marker date="1461308356000" expanded="true" signature="16598:16683" placeholder="SELECT giant... giantbomb" />
+            <marker date="1461308356000" expanded="true" signature="16984:17098" placeholder="INSERT INTO mismatch... " />
+            <marker date="1461308356000" expanded="true" signature="17453:17486" placeholder="SELECT giant... giantbomb" />
+            <marker date="1461308356000" expanded="true" signature="17715:17753" placeholder="SELECT giant... mismatch" />
+            <marker date="1461308356000" expanded="true" signature="18998:19122" placeholder="INSERT INTO giantbomb... " />
+            <marker date="1461308356000" expanded="true" signature="20295:20522" placeholder="INSERT INTO giantbomb... " />
+            <marker date="1461308356000" expanded="true" signature="21565:21837" placeholder="INSERT INTO " />
+            <marker date="1461308356000" expanded="true" signature="22923:22997" placeholder="SELECT * FRO... game_name" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/plotly/plotly/plotly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-482">
+          <caret line="585" column="6" selection-start-line="585" selection-start-column="6" selection-end-line="585" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <marker date="1461305242000" expanded="true" signature="171:227" placeholder="UPDATE platf... " />
+            <marker date="1461305242000" expanded="true" signature="171:229" placeholder="UPDATE platf... " />
+            <marker date="1461305242000" expanded="true" signature="171:231" placeholder="UPDATE platf... " />
+            <marker date="1461305242000" expanded="true" signature="171:237" placeholder="UPDATE platf... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/plots/alltime.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/plots/rating.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/plots/publisher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/plots/platform.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/plots/genre.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/plots/alltime.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/plots/franchise.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/controller.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/graph.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/twitchlogo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/audience.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/less/mixins.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/db_create.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+          <folding>
+            <marker date="1461360012000" expanded="true" signature="143:162" placeholder="DROP TABLE s... " />
+            <marker date="1461360012000" expanded="true" signature="182:202" placeholder="DROP TABLE g... " />
+            <marker date="1461360012000" expanded="true" signature="222:243" placeholder="DROP TABLE r... " />
+            <marker date="1461360012000" expanded="true" signature="263:280" placeholder="DROP TABLE r... " />
+            <marker date="1461360012000" expanded="true" signature="300:324" placeholder="DROP TABLE f... " />
+            <marker date="1461360012000" expanded="true" signature="344:364" placeholder="DROP TABLE f... " />
+            <marker date="1461360012000" expanded="true" signature="384:408" placeholder="DROP TABLE p... " />
+            <marker date="1461360012000" expanded="true" signature="428:448" placeholder="DROP TABLE p... " />
+            <marker date="1461360012000" expanded="true" signature="468:491" placeholder="DROP TABLE p... " />
+            <marker date="1461360012000" expanded="true" signature="511:530" placeholder="DROP TABLE p... " />
+            <marker date="1461360012000" expanded="true" signature="550:570" placeholder="DROP TABLE g... " />
+            <marker date="1461360012000" expanded="true" signature="590:606" placeholder="DROP TABLE g... " />
+            <marker date="1461360012000" expanded="true" signature="626:646" placeholder="DROP TABLE t... " />
+            <marker date="1461360012000" expanded="true" signature="666:682" placeholder="DROP TABLE t... " />
+            <marker date="1461360012000" expanded="true" signature="702:721" placeholder="DROP TABLE m... " />
+            <marker date="1461360012000" expanded="true" signature="741:761" placeholder="DROP TABLE g... " />
+            <marker date="1461360012000" expanded="true" signature="950:1480" placeholder="CREATE TABLE... snapshot" />
+            <marker date="1461360012000" expanded="true" signature="1506:1983" placeholder="CREATE TABLE... game_name" />
+            <marker date="1461360012000" expanded="true" signature="2009:2227" placeholder="CREATE TABLE... ratingbomb" />
+            <marker date="1461360012000" expanded="true" signature="2258:2410" placeholder="CREATE TABLE... rating" />
+            <marker date="1461360012000" expanded="true" signature="2441:2671" placeholder="CREATE TABLE... franchisebomb" />
+            <marker date="1461360012000" expanded="true" signature="2702:2863" placeholder="CREATE TABLE... franchise" />
+            <marker date="1461360012000" expanded="true" signature="2894:3124" placeholder="CREATE TABLE... publisherbomb" />
+            <marker date="1461360012000" expanded="true" signature="3155:3316" placeholder="CREATE TABLE... publisher" />
+            <marker date="1461360012000" expanded="true" signature="3347:3567" placeholder="CREATE TABLE... platformbomb" />
+            <marker date="1461360012000" expanded="true" signature="3598:3756" placeholder="CREATE TABLE... platform" />
+            <marker date="1461360012000" expanded="true" signature="3787:4001" placeholder="CREATE TABLE... genrebomb" />
+            <marker date="1461360012000" expanded="true" signature="4031:4180" placeholder="CREATE TABLE... genre" />
+            <marker date="1461360012000" expanded="true" signature="4211:4422" placeholder="CREATE TABLE... themebomb" />
+            <marker date="1461360012000" expanded="true" signature="4453:4602" placeholder="CREATE TABLE... theme" />
+            <marker date="1461360012000" expanded="true" signature="4633:4840" placeholder="CREATE TABLE... mismatch" />
+            <marker date="1461360012000" expanded="true" signature="4871:5262" placeholder="CREATE TABLE... giantbomb" />
+            <marker date="1461360012000" expanded="true" signature="5293:5500" placeholder="CREATE TABLE... mismatch" />
+            <marker date="1461360012000" expanded="true" signature="5531:6572" placeholder="CREATE TABLE... stream" />
+            <marker date="1461360012000" expanded="true" signature="6603:6859" placeholder="CREATE TABLE... team" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/machine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1461123261000" expanded="true" signature="374:507" placeholder="SELECT * fro... snapshot" />
+            <marker date="1461123261000" expanded="true" signature="374:1510" placeholder="SELECT * FRO... snapshot" />
+            <marker date="1461123261000" expanded="true" signature="1527:1553" placeholder="SELECT * FRO... " />
+            <marker date="1461123261000" expanded="true" signature="1527:1554" placeholder="SELECT * FRO... game_name" />
+            <marker date="1461123261000" expanded="true" signature="1527:1562" placeholder="SELECT stamp... snapshot" />
+            <marker date="1461123261000" expanded="true" signature="1527:1606" placeholder="SELECT stamp... snapshot" />
+            <marker date="1461123261000" expanded="true" signature="1527:1643" placeholder="SELECT stamp... snapshot" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/plots/theme.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/img/plots/timeseries.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/plot_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2156">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+            <marker date="1461360012000" expanded="true" signature="506:814" placeholder="SELECT missi... missing_value" />
+            <marker date="1461360012000" expanded="true" signature="1087:1605" placeholder="SELECT platf... platformbomb" />
+            <marker date="1461360012000" expanded="true" signature="3165:3205" placeholder="SELECT name,... game_name" />
+            <marker date="1461360012000" expanded="true" signature="4665:4791" placeholder="SELECT name,... snapshot" />
+          </folding>
         </state>
       </provider>
     </entry>

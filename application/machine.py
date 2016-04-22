@@ -58,7 +58,6 @@ X_train = [[math.sin(2*math.pi*1.0/(60*24*60)*x), math.cos(2*math.pi*1.0/(60*24*
 model = LinearRegression()
 
 model.fit(X_train, viewers - viewers.mean())
-
 y = model.predict(X_train)
 
 pyplot.plot(times, y + viewers.mean())

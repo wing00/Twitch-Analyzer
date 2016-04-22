@@ -1,20 +1,21 @@
 import db_connect
-from multiprocessing import Pool
-import requests
-from functools import partial
 
-import plotly
-
-plotly.tools.set_credentials_file(username='styoung', api_key='vaa6619ibf')
 conn = db_connect.connect()
 cur = conn.cursor()
 
-cur.execute('''SELECT * FROM publisher WHERE publisherid = 2189
-''')
-fetch = cur.fetchall()
-print fetch
+test = {'PC':1,
+'Mobile':2,
+'Microsoft':3,
+'Sony': 4,
+'Nintendo':5,
+'Sega':6,
+'Other': 7}
 
-# conn.commit()
+
+query = '''UPDATE platformgroup SET groupid = 7 WHERE platformgroup = 'Other'
+'''
+
+cur.execute(query)
+
+conn.commit()
 conn.close()
-
-print fetch[0]

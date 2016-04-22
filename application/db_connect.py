@@ -649,7 +649,7 @@ class Giantbomb:
                 self.add_db(api, name)
             else:
                 self.add_db_no_api(name, giantbombid)
-            print(u'added ' + name + u' to giantbomb table')
+            print(u'added ' + re.sub(r'[^\x00-\x7F]', '', name) + u' to giantbomb table')
 
     @classmethod
     def check(cls, name, giantbombid):

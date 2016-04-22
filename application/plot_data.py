@@ -1,5 +1,6 @@
 import db_connect
 import plotly
+from application import app
 from multiprocessing import Pool
 
 
@@ -20,13 +21,12 @@ def create_plot_table(table_name, online=False):
         nameid=table_name + 'id'
     )
 
-    query = '''
-        SELECT %(name)s.%(name)s, SUM(game_name.viewer_total) AS viewers
-          FROM %(namebomb)s
-            INNER JOIN game_name
-              ON game_name.giantbombid = %(namebomb)s.giantbombid
-            INNER JOIN %(name)s
-              ON %(namebomb)s.%(nameid)s = %(name)s.%(nameid)s''' % param
+    query = '''SELECT %(name)s.%(name)s, SUM(game_name.viewer_total) AS viewers
+                  FROM %(namebomb)s
+                  INNER JOIN game_name
+                    ON game_name.giantbombid = %(namebomb)s.giantbombid
+                  INNER JOIN %(name)s
+                    ON %(namebomb)s.%(nameid)s = %(name)s.%(nameid)s''' % param
 
     if table_name == 'rating':
         query += '''
@@ -34,6 +34,20 @@ def create_plot_table(table_name, online=False):
             GROUP BY rating.rating
             ORDER BY rating.rating ASC;
         '''
+    elif table_name =='platform':
+        query = '''
+            SELECT platformgroup.platformgroup, SUM(game_name.viewer_total) AS viewers
+                FROM platformbomb
+                INNER JOIN game_name
+                  ON game_name.giantbombid = platformbomb.giantbombid
+                INNER JOIN platform
+                  ON platformbomb.platformid = platform.platformid
+                INNER JOIN platformgroup
+                  ON platformgroup.platformid = platform.platformid
+                GROUP BY platformgroup.platformgroup
+                ORDER BY viewers DESC;
+        '''
+
     else:
         query += '''
           GROUP BY %(name)s.%(name)s
@@ -44,17 +58,22 @@ def create_plot_table(table_name, online=False):
     rows = cur.fetchall()
     conn.close()
 
-    label, values = zip(*rows)
+    if table_name == 'genre':
+        total = sum(value for name, value in rows)
+        rows = [(name, value) for name, value in rows if value > 0.01 * total] + [('Other', sum(value for name, value in rows if value <= 0.01 * total))]
+
+    label, values = zip(*sorted(rows, key=lambda x: -x[1]))
+
     data = [dict(
-            labels=label,
-            values=values,
-            type='pie',
-            textinfo='none'
+            y=values,
+            x=label,
+            marker=dict(color=['#1F77B4', '#FF7F0E', '#2CA02C', '#D62728', '#103D5D', '#9467BD', '#17BECF', '#E377C2', '#FFB574', '#57A9E2']),
+            type='bar',
             )]
 
-    layout = plotly.graph_objs.Layout(
+    layout = dict(
         title=table_name.title() + ' By Viewers',
-        titlefont=plotly.graph_objs.Font(
+        titlefont=dict(
             size=48,
         ),
         showlegend=False
@@ -62,10 +81,7 @@ def create_plot_table(table_name, online=False):
 
     fig = dict(data=data, layout=layout)
 
-    try:
-        plotly.plotly.image.save_as(fig, filename='static/img/plots/' + table_name, format='png')
-    except:
-        print('error', table_name)
+    plotly.plotly.image.save_as(fig, filename='static/img/plots/' + table_name, format='png')
 
     div = plotly.offline.plot(fig, output_type='div')
     with open('templates/plots/' + table_name + '.html', mode='w+') as f:
@@ -88,25 +104,43 @@ def create_plot_all_time(online=False):
     cur.execute('''SELECT name, viewer_total FROM game_name''')
     rows = cur.fetchall()
 
-    label, values = zip(*rows)
+    total = sum(value for name, value in rows)
+    new_rows = sorted([(name[:17], value) for name, value in rows if value > 0.005 * total], key=lambda x: x[1])
+               #+ [('Other', sum(value for name, value in rows if value <= 0.01 * total))]
+
+    label, values = zip(*new_rows)
     data = [dict(
-            labels=label,
-            values=values,
-            type='pie',
-            textinfo='none'
+            y=label,
+            x=values,
+            type='bar',
+            orientation='h',
             )]
-    layout = plotly.graph_objs.Layout(
+
+    layout = dict(
         title='Games By Viewers',
-        titlefont=plotly.graph_objs.Font(
+        titlefont=dict(
             size=48,
         ),
-        showlegend=False
+
+        margin=dict(
+            l=100,
+            pad=4
+        ),
+
+        yaxis=dict(
+            tickangle=-45,
+            tickfont=dict(
+                size=8
+            ),
+        ),
+        showlegend=False,
     )
 
     fig = dict(data=data, layout=layout)
 
     plotly.plotly.image.save_as(fig, filename='static/img/plots/alltime', format='png')
     div = plotly.offline.plot(fig, output_type='div')
+
     with open('templates/plots/alltime.html', mode='w+') as f:
         f.write(div)
 
@@ -130,8 +164,8 @@ def create_plot_time_series(online=False):
                 SELECT name, viewers, stamp FROM snapshot
                 WHERE stamp >= '2016-04-02'
                 ORDER BY name, stamp ASC
-
                 ''')
+
     rows = cur.fetchall()
 
     data = []
@@ -154,7 +188,6 @@ def create_plot_time_series(online=False):
                 x=timestamps,
                 y=viewers,
                 name=labels,
-
             )
 
             data.append(trace)
@@ -163,9 +196,9 @@ def create_plot_time_series(online=False):
             viewers = [row[1]]
             timestamps = [row[2]]
 
-    layout = plotly.graph_objs.Layout(
+    layout = dict(
         title='Games - Time Series',
-        titlefont=plotly.graph_objs.Font(
+        titlefont=dict(
             size=48,
         ),
         showlegend=False
@@ -186,11 +219,12 @@ def create_plot_time_series(online=False):
 
 if __name__ == '__main__':
 
-    table_names = ['publisher', 'franchise', 'rating', 'platform', 'genre', 'theme']
+    # unused categories: 'publisher', 'franchise', 'theme'
+    plotly.tools.set_credentials_file(username=app.config['PLOTLY_NAME'], api_key=app.config['PLOTLY_API'])
 
+    table_names = ['rating', 'platform', 'genre', 'publisher', 'franchise', 'theme']
     pool = Pool()
     pool.map(create_plot_table, table_names)
     create_plot_all_time()
-    create_plot_time_series()
+    # create_plot_time_series()
 
-    print("success")
