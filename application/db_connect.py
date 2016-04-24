@@ -279,38 +279,40 @@ def get_stream_row(offset):
                  headers=app.config['TWITCH_API']
                  ).json()['streams']
 
-    for data in datas:
-        for field in data:
-            channel = field['channel']
-            row = dict(
-                sponsored=False,
-                scheduled=False,
-                featured=False,
 
-                game=field['game'],
-                viewers=field['viewers'],
-                stream_id=field['_id'],
 
-                mature=channel['mature'],
-                language=channel['broadcaster_language'],
-                channel_id=channel['_id'],
-                partner=channel['partner'],
-                url=channel['url'],
-                total_views=channel['views'],
-                followers=channel['followers']
+    for field in datas:
+        channel = field['channel']
+        row = dict(
+            sponsored=False,
+            scheduled=False,
+            featured=False,
+
+            game=field['game'],
+            viewers=field['viewers'],
+            stream_id=field['_id'],
+
+            mature=channel['mature'],
+            language=channel['broadcaster_language'],
+            channel_id=channel['_id'],
+            partner=channel['partner'],
+            url=channel['url'],
+            total_views=channel['views'],
+            followers=channel['followers']
+        )
+
+
+        team_count = get_team_row(channel['_links']['teams'], channel['_id'])
+        video_url = HTTP_RE.sub(r'https://', channel['_links']['videos'])
+        videos = requests.get(video_url, headers=app.config['TWITCH_API']).json()
+        video_count = videos['_total'] if videos['_total'] else 0
+
+        row.update(dict(
+            video_count=video_count,
+            team_count=team_count
             )
-
-            team_count = get_team_row(channel['_links']['teams'], channel['_id'])
-            video_url = HTTP_RE.sub(r'https://', channel['_links']['videos'])
-            videos = requests.get(video_url, headers=app.config['TWITCH_API']).json()
-            video_count = videos['_total'] if videos['_total'] else 0
-
-            row.update(dict(
-                video_count=video_count,
-                team_count=team_count
-                )
-            )
-            update_stream_table(row)
+        )
+        update_stream_table(row)
 
 
 def get_featured_row(field):
@@ -822,4 +824,3 @@ if __name__ == '__main__':
         Twitch.run_streams()
     if options.featured:
         Twitch.run_featured()
-
