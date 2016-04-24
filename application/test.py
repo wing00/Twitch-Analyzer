@@ -3,19 +3,16 @@ import db_connect
 conn = db_connect.connect()
 cur = conn.cursor()
 
-test = {'PC':1,
-'Mobile':2,
-'Microsoft':3,
-'Sony': 4,
-'Nintendo':5,
-'Sega':6,
-'Other': 7}
 
 
-query = '''UPDATE platformgroup SET groupid = 7 WHERE platformgroup = 'Other'
+query = '''SELECT * FROM stream WHERE url = 'https://www.twitch.tv/clintstevens'
 '''
 
 cur.execute(query)
+fetch = cur.fetchall()
+
+for item in fetch:
+    print item
 
 conn.commit()
 conn.close()

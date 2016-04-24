@@ -1,5 +1,6 @@
 import db_connect
 import plotly
+import numpy
 from application import app
 from multiprocessing import Pool
 
@@ -114,6 +115,9 @@ def create_plot_all_time(online=False):
             x=values,
             type='bar',
             orientation='h',
+            marker=dict(
+                color='random'
+                )
             )]
 
     layout = dict(
@@ -221,10 +225,11 @@ if __name__ == '__main__':
 
     # unused categories: 'publisher', 'franchise', 'theme'
     plotly.tools.set_credentials_file(username=app.config['PLOTLY_NAME'], api_key=app.config['PLOTLY_API'])
+    plotly.tools.set_credentials_file(username='sherington', api_key='s5qlad4ga3')
 
     table_names = ['rating', 'platform', 'genre', 'publisher', 'franchise', 'theme']
-    pool = Pool()
-    pool.map(create_plot_table, table_names)
+    # pool = Pool()
+    # pool.map(create_plot_table, table_names)
     create_plot_all_time()
     # create_plot_time_series()
 

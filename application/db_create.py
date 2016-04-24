@@ -187,6 +187,6 @@ def make_tables():
     conn.close()
 
 if __name__ == '__main__':
-    # BREAK IN CASE OF EMERGENCY # drop_tables()
+    # IN CASE OF EMERGENCY # drop_tables()
     make_tables()
 
