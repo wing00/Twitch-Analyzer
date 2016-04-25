@@ -159,7 +159,7 @@ def make_tables():
          STREAMID         BIGINT                  NOT NULL,
          CHANNELID        INT                     NOT NULL,
          URL              TEXT                    NOT NULL,
-         LANGUAGE         VARCHAR(2)              NOT NULL,
+         LANGUAGE         TEXT                    NULL,
          SCHEDULED        BOOLEAN                 NOT NULL,
          FEATURED         BOOLEAN                 NOT NULL,
          MATURE           BOOLEAN                 NULL,

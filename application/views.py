@@ -17,3 +17,7 @@ def index():
 @app.route('/test')
 def test():
     return render_template('test.html')
+
+@app.route('/model')
+def model():
+    return render_template('model.html')

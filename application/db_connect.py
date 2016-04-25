@@ -221,8 +221,6 @@ def games_wrap(offset):
 
 
 
-
-
 def video_wrap(params):
     """wrapper for parallel requests
     :param params: off set of page
@@ -251,7 +249,7 @@ def get_team_row(url, channel_id):
                          headers=app.config['TWITCH_API']
                          ).json()
 
-    if teams['teams']:
+    if teams.get('teams', 0) != 0:
         for team in teams['teams']:
             team_row = dict(
                 channel_id=channel_id,
@@ -280,7 +278,6 @@ def get_stream_row(offset):
                  ).json()['streams']
 
 
-
     for field in datas:
         channel = field['channel']
         row = dict(
@@ -300,7 +297,6 @@ def get_stream_row(offset):
             total_views=channel['views'],
             followers=channel['followers']
         )
-
 
         team_count = get_team_row(channel['_links']['teams'], channel['_id'])
         video_url = HTTP_RE.sub(r'https://', channel['_links']['videos'])
@@ -386,6 +382,30 @@ class Twitch:
 
     def __init__(self):
         self.headers = app.config['TWITCH_API']
+
+    def get_live(self):
+        data = requests.get('https://api.twitch.tv/kraken/games/top',
+                            headers=app.config['TWITCH_API']
+                            ).json()
+
+        test = []
+
+        for field in data['top']:
+            row = dict(
+                name=field['game']['name'],
+                giantbombid=field['game']['giantbomb_id'],
+                viewers=field['viewers'],
+                channels=field['channels'],
+            )
+            test.append(row)
+        return test
+
+    @classmethod
+    def run_live(cls):
+        live = cls()
+        return live.get_live()
+
+
 
     @staticmethod
     def set_fields():
@@ -529,6 +549,7 @@ class Giantbomb:
             for row in data['results']:
                 if giantbombid == row['id']:
                     return row['api_detail_url']
+
             print('no match found')
             return
 
@@ -824,3 +845,5 @@ if __name__ == '__main__':
         Twitch.run_streams()
     if options.featured:
         Twitch.run_featured()
+
+
