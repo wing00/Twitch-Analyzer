@@ -1,23 +1,27 @@
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>The Machine</h2>
-                <hr class="star-light">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="wrapper">
-                    <p>Select Features</p>
+   {% extends 'bootstrap/base.html' %}
+
+{% block title %}The Machine{% endblock %}
+
+{% block content %}
+    <div id="games">
+                    <input class="nput-large"
+                           name="game"
+                           type="text"
+                           style="width"
+                           placeholder="Games">
+
                 </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-lg-12 text-center">
+{% endblock %}
 
-                {% include 'plots/live.html' %}
 
-            </div>
-        </div>
-    </div>
+
+
+    {% block scripts %}
+        <script src="https://twitter.github.io/typeahead.js/js/jquery-1.10.2.min.js"></script>
+
+
+        <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+
+        <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+        {% endblock %}

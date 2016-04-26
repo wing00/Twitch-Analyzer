@@ -15,3 +15,12 @@
 .wrapper {
     padding: 0 15% 0 15%;
 }
+
+.links a {
+    color: #FFFFFF;
+}
+
+#games .btn {
+    vertical-align: bottom;
+}
+

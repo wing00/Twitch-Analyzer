@@ -277,7 +277,6 @@ def get_stream_row(offset):
                  headers=app.config['TWITCH_API']
                  ).json()['streams']
 
-
     for field in datas:
         channel = field['channel']
         row = dict(
@@ -352,6 +351,7 @@ def get_featured_row(field):
         team_count=team_count
         )
     )
+
     return row
 
 
@@ -385,6 +385,7 @@ class Twitch:
 
     def get_live(self):
         data = requests.get('https://api.twitch.tv/kraken/games/top',
+                            params=dict(limit=100),
                             headers=app.config['TWITCH_API']
                             ).json()
 

@@ -10,4 +10,5 @@ app.debug = app.config['DEBUG']
 from application import views
 
 if __name__ == '__main__':
-  app.run()
+    app.run()
+
