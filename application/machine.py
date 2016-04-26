@@ -1,19 +1,17 @@
 from sklearn.pipeline import Pipeline
-from sklearn.linear_model import Ridge, LinearRegression
-from sklearn.grid_search import GridSearchCV
-from sklearn.cross_validation import KFold
+from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder
-import dill
 from sklearn.base import TransformerMixin, BaseEstimator
 from sklearn.pipeline import FeatureUnion
+from multiprocessing import Pool
 from scipy import fftpack
+import dill
 import numpy
 import re
+import plotly
 
 import db_connect
-import plotly
 from application import app
-from multiprocessing import Pool
 
 CLEANNAME = re.compile(r'[\s:\']')
 

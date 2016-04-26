@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a1aca03-6fec-4892-afef-55fcd81f31b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/static/js/test.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/templates/plots/live.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/templates/model.html" afterPath="$PROJECT_DIR$/application/templates/models.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/__init__.py" afterPath="$PROJECT_DIR$/application/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/db_connect.py" afterPath="$PROJECT_DIR$/application/db_connect.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/machine.py" afterPath="$PROJECT_DIR$/application/machine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models.py" afterPath="$PROJECT_DIR$/application/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/plotly_stream.py" afterPath="$PROJECT_DIR$/application/plotly_stream.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/css/freelancer.css" afterPath="$PROJECT_DIR$/application/static/css/freelancer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/css/main.css" afterPath="$PROJECT_DIR$/application/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/about.html" afterPath="$PROJECT_DIR$/application/templates/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/base.html" afterPath="$PROJECT_DIR$/application/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/description.html" afterPath="$PROJECT_DIR$/application/templates/description.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/machine.html" afterPath="$PROJECT_DIR$/application/templates/machine.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/templates/test.html" afterPath="$PROJECT_DIR$/application/templates/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/test.py" afterPath="$PROJECT_DIR$/application/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views.py" afterPath="$PROJECT_DIR$/application/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <ignored path="flask.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,52 +48,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="machine.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="machine.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/machine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3285">
-              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            <state relative-caret-position="120">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <marker date="1461706275000" expanded="true" signature="9138:9164" placeholder="SELECT name game_name" />
-                <marker date="1461706275000" expanded="true" signature="9138:9234" placeholder="SELECT name game_name" />
-                <marker date="1461706275000" expanded="true" signature="9138:9241" placeholder="SELECT name game_name" />
-                <marker date="1461706275000" expanded="true" signature="9138:9258" placeholder="SELECT name game_name" />
-                <marker date="1461706275000" expanded="true" signature="9480:11011" placeholder="SELECT strea... stream" />
-                <marker date="1461706275000" expanded="true" signature="9480:11020" placeholder="SELECT strea... stream" />
-                <marker date="1461706275000" expanded="true" signature="9906:10056" placeholder="SELECT array... genrebomb" />
-                <marker date="1461706275000" expanded="true" signature="10210:10364" placeholder="SELECT array... ratingbomb" />
-                <marker date="1461706275000" expanded="true" signature="10518:10826" placeholder="SELECT array... platformbomb" />
-                <marker date="1461706275000" expanded="true" signature="11726:12924" placeholder="SELECT snaps... snapshot" />
-                <marker date="1461706275000" expanded="true" signature="11726:12952" placeholder="SELECT snaps... snapshot" />
-                <marker date="1461706275000" expanded="true" signature="11902:11937" placeholder="SELECT array... " />
-                <marker date="1461706275000" expanded="true" signature="11902:12024" placeholder="SELECT array... genrebomb" />
-                <marker date="1461706275000" expanded="true" signature="11902:12032" placeholder="SELECT array... genrebomb" />
-                <marker date="1461706275000" expanded="true" signature="11902:12041" placeholder="SELECT array... genrebomb" />
-                <marker date="1461706275000" expanded="true" signature="11902:12044" placeholder="SELECT array... genrebomb" />
-                <marker date="1461706275000" expanded="true" signature="11902:12924" placeholder="SELECT array... stamp" />
-                <marker date="1461706275000" expanded="true" signature="12181:12218" placeholder="SELECT array... " />
-                <marker date="1461706275000" expanded="true" signature="12181:12327" placeholder="SELECT array... genrebomb" />
-                <marker date="1461706275000" expanded="true" signature="12464:12756" placeholder="SELECT array... genrebomb" />
-                <marker date="1461706275000" expanded="true" signature="12952:12953" placeholder="SELECT giant... snapshot" />
-                <marker date="1461706275000" expanded="true" signature="13473:13499" placeholder="SELECT * FRO... " />
-                <marker date="1461706275000" expanded="true" signature="13473:13500" placeholder="SELECT * FRO... game_name" />
-                <marker date="1461706275000" expanded="true" signature="13473:13508" placeholder="SELECT stamp... snapshot" />
-                <marker date="1461706275000" expanded="true" signature="13473:13551" placeholder="SELECT stamp... snapshot" />
-                <marker date="1461706275000" expanded="true" signature="13473:13620" placeholder="SELECT stamp... snapshot" />
-                <marker date="1461706275000" expanded="true" signature="14927:15074" placeholder="SELECT stamp... snapshot" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
+                <marker date="1461709212000" expanded="true" signature="9043:9069" placeholder="SELECT name game_name" />
+                <marker date="1461709212000" expanded="true" signature="9043:9139" placeholder="SELECT name game_name" />
+                <marker date="1461709212000" expanded="true" signature="9043:9146" placeholder="SELECT name game_name" />
+                <marker date="1461709212000" expanded="true" signature="9043:9163" placeholder="SELECT name game_name" />
+                <marker date="1461709212000" expanded="true" signature="9385:10916" placeholder="SELECT strea... stream" />
+                <marker date="1461709212000" expanded="true" signature="9385:10925" placeholder="SELECT strea... stream" />
+                <marker date="1461709212000" expanded="true" signature="9811:9961" placeholder="SELECT array... genrebomb" />
+                <marker date="1461709212000" expanded="true" signature="10115:10269" placeholder="SELECT array... ratingbomb" />
+                <marker date="1461709212000" expanded="true" signature="10423:10731" placeholder="SELECT array... platformbomb" />
+                <marker date="1461709212000" expanded="true" signature="11631:12829" placeholder="SELECT snaps... snapshot" />
+                <marker date="1461709212000" expanded="true" signature="11631:12857" placeholder="SELECT snaps... snapshot" />
+                <marker date="1461709212000" expanded="true" signature="11807:11842" placeholder="SELECT array... " />
+                <marker date="1461709212000" expanded="true" signature="11807:11929" placeholder="SELECT array... genrebomb" />
+                <marker date="1461709212000" expanded="true" signature="11807:11937" placeholder="SELECT array... genrebomb" />
+                <marker date="1461709212000" expanded="true" signature="11807:11946" placeholder="SELECT array... genrebomb" />
+                <marker date="1461709212000" expanded="true" signature="11807:11949" placeholder="SELECT array... genrebomb" />
+                <marker date="1461709212000" expanded="true" signature="11807:12829" placeholder="SELECT array... stamp" />
+                <marker date="1461709212000" expanded="true" signature="12086:12123" placeholder="SELECT array... " />
+                <marker date="1461709212000" expanded="true" signature="12086:12232" placeholder="SELECT array... genrebomb" />
+                <marker date="1461709212000" expanded="true" signature="12369:12661" placeholder="SELECT array... genrebomb" />
+                <marker date="1461709212000" expanded="true" signature="12857:12858" placeholder="SELECT giant... snapshot" />
+                <marker date="1461709212000" expanded="true" signature="13378:13404" placeholder="SELECT * FRO... " />
+                <marker date="1461709212000" expanded="true" signature="13378:13405" placeholder="SELECT * FRO... game_name" />
+                <marker date="1461709212000" expanded="true" signature="13378:13413" placeholder="SELECT stamp... snapshot" />
+                <marker date="1461709212000" expanded="true" signature="13378:13456" placeholder="SELECT stamp... snapshot" />
+                <marker date="1461709212000" expanded="true" signature="13378:13525" placeholder="SELECT stamp... snapshot" />
+                <marker date="1461709212000" expanded="true" signature="14832:14979" placeholder="SELECT stamp... snapshot" />
               </folding>
             </state>
           </provider>
@@ -183,8 +153,8 @@
       <file leaf-file-name="plotly_stream.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/plotly_stream.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-75">
-              <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
+            <state relative-caret-position="180">
+              <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <marker date="1461706658000" expanded="true" signature="931:1006" placeholder="SELECT * FRO... snapshot" />
@@ -194,11 +164,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plotly.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/plotly/plotly/plotly.py">
+      <file leaf-file-name="runtime.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runtime.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="4" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -231,7 +211,6 @@
         <option value="&lt;506a38e2-8d90-42b4-8a9e-932801382bfb&gt;/home/vagrant/.mrjob.conf" />
         <option value="$PROJECT_DIR$/application/update_streams.py" />
         <option value="$PROJECT_DIR$/application/update_featured.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/application/db_update.py" />
         <option value="$PROJECT_DIR$/application/templates/header.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -265,7 +244,6 @@
         <option value="$PROJECT_DIR$/application/models.py" />
         <option value="$PROJECT_DIR$/application/templates/machine.html" />
         <option value="$PROJECT_DIR$/run.py" />
-        <option value="$PROJECT_DIR$/application/machine.py" />
         <option value="$PROJECT_DIR$/application/plotly_stream.py" />
         <option value="$PROJECT_DIR$/application/templates/plots/model.html" />
         <option value="$PROJECT_DIR$/application/views.py" />
@@ -273,6 +251,8 @@
         <option value="$PROJECT_DIR$/application/templates/test.html" />
         <option value="$PROJECT_DIR$/application/static/css/main.css" />
         <option value="$PROJECT_DIR$/application/templates/models.html" />
+        <option value="$PROJECT_DIR$/application/machine.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -363,86 +343,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitchapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitchapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitchapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitchapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -993,14 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -1045,14 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="818" column="0" selection-start-line="818" selection-start-column="0" selection-end-line="818" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1333,18 +1217,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/plotly_stream.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1461706658000" expanded="true" signature="931:1006" placeholder="SELECT * FRO... snapshot" />
-            <marker date="1461706658000" expanded="true" signature="931:1087" placeholder="SELECT stamp... snapshot" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1397,40 +1269,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/plotly_stream.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1461706658000" expanded="true" signature="931:1006" placeholder="SELECT * FRO... snapshot" />
+            <marker date="1461706658000" expanded="true" signature="931:1087" placeholder="SELECT stamp... snapshot" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/machine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3285">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="120">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1461706275000" expanded="true" signature="9138:9164" placeholder="SELECT name game_name" />
-            <marker date="1461706275000" expanded="true" signature="9138:9234" placeholder="SELECT name game_name" />
-            <marker date="1461706275000" expanded="true" signature="9138:9241" placeholder="SELECT name game_name" />
-            <marker date="1461706275000" expanded="true" signature="9138:9258" placeholder="SELECT name game_name" />
-            <marker date="1461706275000" expanded="true" signature="9480:11011" placeholder="SELECT strea... stream" />
-            <marker date="1461706275000" expanded="true" signature="9480:11020" placeholder="SELECT strea... stream" />
-            <marker date="1461706275000" expanded="true" signature="9906:10056" placeholder="SELECT array... genrebomb" />
-            <marker date="1461706275000" expanded="true" signature="10210:10364" placeholder="SELECT array... ratingbomb" />
-            <marker date="1461706275000" expanded="true" signature="10518:10826" placeholder="SELECT array... platformbomb" />
-            <marker date="1461706275000" expanded="true" signature="11726:12924" placeholder="SELECT snaps... snapshot" />
-            <marker date="1461706275000" expanded="true" signature="11726:12952" placeholder="SELECT snaps... snapshot" />
-            <marker date="1461706275000" expanded="true" signature="11902:11937" placeholder="SELECT array... " />
-            <marker date="1461706275000" expanded="true" signature="11902:12024" placeholder="SELECT array... genrebomb" />
-            <marker date="1461706275000" expanded="true" signature="11902:12032" placeholder="SELECT array... genrebomb" />
-            <marker date="1461706275000" expanded="true" signature="11902:12041" placeholder="SELECT array... genrebomb" />
-            <marker date="1461706275000" expanded="true" signature="11902:12044" placeholder="SELECT array... genrebomb" />
-            <marker date="1461706275000" expanded="true" signature="11902:12924" placeholder="SELECT array... stamp" />
-            <marker date="1461706275000" expanded="true" signature="12181:12218" placeholder="SELECT array... " />
-            <marker date="1461706275000" expanded="true" signature="12181:12327" placeholder="SELECT array... genrebomb" />
-            <marker date="1461706275000" expanded="true" signature="12464:12756" placeholder="SELECT array... genrebomb" />
-            <marker date="1461706275000" expanded="true" signature="12952:12953" placeholder="SELECT giant... snapshot" />
-            <marker date="1461706275000" expanded="true" signature="13473:13499" placeholder="SELECT * FRO... " />
-            <marker date="1461706275000" expanded="true" signature="13473:13500" placeholder="SELECT * FRO... game_name" />
-            <marker date="1461706275000" expanded="true" signature="13473:13508" placeholder="SELECT stamp... snapshot" />
-            <marker date="1461706275000" expanded="true" signature="13473:13551" placeholder="SELECT stamp... snapshot" />
-            <marker date="1461706275000" expanded="true" signature="13473:13620" placeholder="SELECT stamp... snapshot" />
-            <marker date="1461706275000" expanded="true" signature="14927:15074" placeholder="SELECT stamp... snapshot" />
+            <marker date="1461709212000" expanded="true" signature="9043:9069" placeholder="SELECT name game_name" />
+            <marker date="1461709212000" expanded="true" signature="9043:9139" placeholder="SELECT name game_name" />
+            <marker date="1461709212000" expanded="true" signature="9043:9146" placeholder="SELECT name game_name" />
+            <marker date="1461709212000" expanded="true" signature="9043:9163" placeholder="SELECT name game_name" />
+            <marker date="1461709212000" expanded="true" signature="9385:10916" placeholder="SELECT strea... stream" />
+            <marker date="1461709212000" expanded="true" signature="9385:10925" placeholder="SELECT strea... stream" />
+            <marker date="1461709212000" expanded="true" signature="9811:9961" placeholder="SELECT array... genrebomb" />
+            <marker date="1461709212000" expanded="true" signature="10115:10269" placeholder="SELECT array... ratingbomb" />
+            <marker date="1461709212000" expanded="true" signature="10423:10731" placeholder="SELECT array... platformbomb" />
+            <marker date="1461709212000" expanded="true" signature="11631:12829" placeholder="SELECT snaps... snapshot" />
+            <marker date="1461709212000" expanded="true" signature="11631:12857" placeholder="SELECT snaps... snapshot" />
+            <marker date="1461709212000" expanded="true" signature="11807:11842" placeholder="SELECT array... " />
+            <marker date="1461709212000" expanded="true" signature="11807:11929" placeholder="SELECT array... genrebomb" />
+            <marker date="1461709212000" expanded="true" signature="11807:11937" placeholder="SELECT array... genrebomb" />
+            <marker date="1461709212000" expanded="true" signature="11807:11946" placeholder="SELECT array... genrebomb" />
+            <marker date="1461709212000" expanded="true" signature="11807:11949" placeholder="SELECT array... genrebomb" />
+            <marker date="1461709212000" expanded="true" signature="11807:12829" placeholder="SELECT array... stamp" />
+            <marker date="1461709212000" expanded="true" signature="12086:12123" placeholder="SELECT array... " />
+            <marker date="1461709212000" expanded="true" signature="12086:12232" placeholder="SELECT array... genrebomb" />
+            <marker date="1461709212000" expanded="true" signature="12369:12661" placeholder="SELECT array... genrebomb" />
+            <marker date="1461709212000" expanded="true" signature="12857:12858" placeholder="SELECT giant... snapshot" />
+            <marker date="1461709212000" expanded="true" signature="13378:13404" placeholder="SELECT * FRO... " />
+            <marker date="1461709212000" expanded="true" signature="13378:13405" placeholder="SELECT * FRO... game_name" />
+            <marker date="1461709212000" expanded="true" signature="13378:13413" placeholder="SELECT stamp... snapshot" />
+            <marker date="1461709212000" expanded="true" signature="13378:13456" placeholder="SELECT stamp... snapshot" />
+            <marker date="1461709212000" expanded="true" signature="13378:13525" placeholder="SELECT stamp... snapshot" />
+            <marker date="1461709212000" expanded="true" signature="14832:14979" placeholder="SELECT stamp... snapshot" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

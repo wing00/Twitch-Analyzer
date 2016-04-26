@@ -1,9 +1,13 @@
 Flask>=0.10.1
 Flask-Bootstrap>=3.3.5.7
 Jinja2>=2.8
-
 gunicorn>=19.4.5
-requests>=2.9.1
 
+requests>=2.9.1
 psycopg2>=2.6.1
 plotly>=1.9.6
+
+dill>=0.2.5
+scikit-learn>=0.17.1
+numpy>=1.11.0
+scipy>=0.17.0
