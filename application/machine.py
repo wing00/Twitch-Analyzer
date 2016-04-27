@@ -393,6 +393,57 @@ def master_data():
     return test_times, viewers, machine, 'test'
 
 
+def look():
+    conn = db_connect.connect()
+    cur = conn.cursor()
+
+    query = '''
+    SELECT stream.channelid, stream.language, stream.scheduled, stream.featured, stream.mature, stream.partner, stream.sponsored, game_name.giantbombid, genres, ratings, platforms, stream.followers, stream.videos, stream.teams, stream.stamp, stream.viewers FROM stream
+
+                       LEFT JOIN game_name
+                       ON game_name.name = stream.game
+
+                       LEFT JOIN (
+                          SELECT array_agg(genrebomb.genreid) AS genres, giantbombid
+                            FROM genrebomb
+                            GROUP BY giantbombid
+                       ) A
+                       ON A.giantbombid = game_name.giantbombid
+
+                       LEFT JOIN (
+                          SELECT array_agg(ratingbomb.ratingid) AS ratings, giantbombid
+                            FROM ratingbomb
+                            GROUP BY giantbombid
+                       ) B
+                       ON B.giantbombid = game_name.giantbombid
+
+                       LEFT JOIN (
+                          SELECT array_agg(DISTINCT (platformgroup.groupid)) AS platforms, giantbombid
+                            FROM platformbomb
+                            INNER JOIN platformgroup
+                              ON platformgroup.platformid = platformbomb.platformid
+                            GROUP BY giantbombid
+                       ) C
+                       ON C.giantbombid = game_name.giantbombid
+
+                       WHERE stamp >= '2016-04-07'
+                       ORDER BY stamp ASC
+        '''
+    cur.execute(query)
+    fetch = cur.fetchall()
+
+    data = dict(zip(
+        ['channelid', 'language', 'scheduled', 'featured', 'mature', 'partner', 'sponsored', 'games', 'genres',
+         'ratings', 'platforms', 'followers', 'videos', 'teams', 'times', 'viewers'], zip(*fetch)))
+
+    starscream = dill.load(open('./models/full.dill', mode='wb+'))
+    machine = starscream.predict(fetch)
+    print starscream.get_max(fetch, 10)
+    print starscream.score(fetch, data['viewers'])
+
+    return data['times'], data['viewers'], machine, 'full'
+
+
 def get_time_data(name):
     conn = db_connect.connect()
     cur = conn.cursor()
@@ -507,10 +558,10 @@ if __name__ == '__main__':
 
     gamelist = get_game_list(20)
 
-    pool = Pool()
-    fetch = pool.map(get_time_data, gamelist)
-    map(plot_predict, fetch)
+    # pool = Pool()
+    # fetch = pool.map(get_time_data, gamelist)
+    # map(plot_predict, fetch)
 
-    # fetch = streams_data()
+    fetch = streams_data()
     # plot_predict(fetch)
     # plot_fft()

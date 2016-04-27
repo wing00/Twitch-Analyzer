@@ -120,13 +120,10 @@ def stream_model_data(stream):
         predicted = starscream.predict([datetime.datetime.now()])[0]
 
         x = datetime.datetime.now()
-
         y = predicted
         stream[0]['stream_obj'].write(dict(x=x, y=y))
-
         y = actual
         stream[1]['stream_obj'].write(dict(x=x, y=y))
-
         y = abs((predicted - actual)/actual) * 100
         stream[2]['stream_obj'].write(dict(x=x, y=y))
 

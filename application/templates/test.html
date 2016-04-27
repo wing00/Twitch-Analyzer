@@ -1,4 +1,4 @@
-   {% extends 'bootstrap/base.html' %}
+{% extends 'bootstrap/base.html' %}
 
 {% block title %}The Machine{% endblock %}
 
@@ -14,14 +14,8 @@
 
 {% endblock %}
 
-
-
-
-    {% block scripts %}
-        <script src="https://twitter.github.io/typeahead.js/js/jquery-1.10.2.min.js"></script>
-
-
-        <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
-
-        <script src="{{ url_for('static', filename='js/test.js') }}"></script>
-        {% endblock %}
+{% block scripts %}
+    <script src="https://twitter.github.io/typeahead.js/js/jquery-1.10.2.min.js"></script>
+    <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+{% endblock %}
