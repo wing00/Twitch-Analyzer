@@ -26,7 +26,7 @@
                     </li>
 
                     <li class="page-scroll">
-                        <a href="#description">Machine</a>
+                        <a href="#machine">Machine</a>
                     </li>
 
                 </ul>
@@ -39,75 +39,82 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <hr class="star-light">
+    <header>
+        <br>
+    </header>
+    <section id="machine">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="wrapper">
+                        <h1>The Machine</h1>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="wrapper">
-                    <h1>The Machine</h1>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    {{ params['div'] | safe }}
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-2 text-center">
+                    <br>
+                </div>
+                <div class="col-md-8 text-center">
+                    <form class="form-inline" method="post">
+                    <div id="games">
+                        <input class="typeahead form-control" name="game" type="text"
+                               placeholder="{% if params['game'] %}{{ params['game'] }}{% else %}Games{% endif %}">
+                        <button type="submit" class="btn btn-primary">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                </div>
+
+                <br>
+            </div>
+
+            <div class="row">
+                <br>
+            </div>
+            <div class="row">
+                <br>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <br>
+                </div>
+                <div class="col-md-4 text-center">
+                    <br>
+                    <a class="btn btn-secondary" href="index#future" role="button">Go Back</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center" >
+                    <br>
+                </div>
+                <div class="col-md-4 text-center" >
+                    <br>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                {{ params['div'] | safe }}
-            </div>
-
-        </div>
-        <div class="row text-center">
-            <div class="col-md-2 text-center">
-                <br>
-            </div>
-            <div class="col-md-8 text-center">
-                <form class="form-inline" method="post">
-                <div id="games">
-                    <input class="typeahead form-control" name="game" type="text"
-                           placeholder="{% if params['game'] %}{{ params['game'] }}{% else %}Games{% endif %}">
-                    <button type="submit" class="btn btn-primary">
-                        Submit
-                    </button>
-                </div>
-            </form>
-            </div>
-
-            <br>
-        </div>
-
-        <div class="row">
-            <br>
-        </div>
-        <div class="row">
-            <br>
-        </div>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <br>
-            </div>
-            <div class="col-md-4 text-center">
-                <br>
-                <a class="btn btn-secondary" href="index#future" role="button">Go Back</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 text-center" >
-                <br>
-            </div>
-            <div class="col-md-4 text-center" >
-                <br>
-            </div>
-        </div>
-    </div>
     {% include 'footer.html' %}
+
 {% endblock %}
 
 {% block scripts %}
     {{ super() }}
     <script src="{{ url_for('static', filename='js/typeahead.bundle.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/games.js') }}"></script>
 
 {% endblock %}

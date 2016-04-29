@@ -26,7 +26,7 @@ def game_list(num=10):
     return [item[0] for item in gamelist]
 
 
-def range():
+def ranges():
     """calculates all possible combinations of parameters and writes to json file
     """
     conn = server.connect()
@@ -70,10 +70,8 @@ def range():
 
 
                 '''
-
     cur.execute(query)
     fetch = cur.fetchall()
-
     conn.close()
 
     starscream = dill.load(open('application/models/full.dill', mode='rb+'))
@@ -86,4 +84,3 @@ def range():
 
     with open('application/models/range.json', mode='wb+') as f:
         f.write(json.dumps(data, indent=4, separators=(',', ': ')))
-

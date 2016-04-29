@@ -14,7 +14,6 @@ def predict_time_model(name):
 
     :param name: name of the game
     :return times, viewers, machine, name: list of times, viewer count, predicted viewers, name of the game
-
     """
     conn = server.connect()
     cur = conn.cursor()
@@ -175,7 +174,6 @@ def plot_fft(name='Dota 2'):
     fig = dict(data=data,
                layout=layout
                )
-
     plotly.plotly.image.save_as(fig, filename='static/img/plots/fft', format='png')
 
 

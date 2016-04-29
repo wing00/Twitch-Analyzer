@@ -1,4 +1,4 @@
-from transform import StreamTransformer, FFTTransformer
+from transform import SVRTransformer, FFTTransformer
 from application.db import server
 from multiprocessing import Pool
 import get
@@ -12,6 +12,7 @@ CLEANNAME = re.compile(r'[\s:\']')
 def train_full_model():
     """Gets all data and formats them for fitting in the full model
     """
+
     conn = server.connect()
     cur = conn.cursor()
 
@@ -49,17 +50,17 @@ def train_full_model():
 
                        WHERE stamp >= '2016-04-07'
                        ORDER BY stamp ASC
+                       LIMIT 1000
         '''
+
     cur.execute(query)
     fetch = cur.fetchall()
     conn.close()
-
     print 'data get'
-
-    starscream = StreamTransformer()
+    starscream = SVRTransformer()
     data, viewers = starscream.process(fetch)
     starscream.fit(data, viewers)
-    dill.dump(starscream, open('./models/full.dill', mode='wb+'))
+    dill.dump(starscream, open('application/models/full.dill', mode='wb+'))
 
 
 def train_time_model(name):
@@ -85,14 +86,13 @@ def train_time_model(name):
 
     starscream = FFTTransformer()
     starscream.fit(data, data['viewers'])
-    dill.dump(starscream, open('./models/' + CLEANNAME.sub('', name) + '.dill', mode='wb+'))
+    dill.dump(starscream, open('application/models/' + CLEANNAME.sub('', name) + '.dill', mode='wb+'))
 
 
 def make_json(gamelist):
     """saves all models into dicts for use with typeahead
 
     :param gamelist: list of games
-
     """
     data = [dict(game=item) for item in gamelist]
     with open('./static/games.json', mode='wb+') as f:
@@ -112,7 +112,6 @@ def run_time_model(num=20):
     pool.close()
 
 if __name__ == '__main__':
+    from os import chdir
+    chdir('../..')
     train_full_model()
-    pass
-
-

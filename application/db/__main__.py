@@ -1,5 +1,6 @@
 from argparse import ArgumentParser
 from twitchapi import Twitch
+from plots import run_plot, r
 
 
 def parse_options():
@@ -10,6 +11,7 @@ def parse_options():
     parser.add_argument('-t', '--stream', default=False, action='store_true')
     parser.add_argument('-f', '--featured', default=False, action='store_true')
     parser.add_argument('-g', '--games', default=False, action='store_true')
+    parser.add_argument('-p', '--plot', default=False, action='store_true')
     return parser.parse_args()
 
 if __name__ == '__main__':
@@ -21,3 +23,5 @@ if __name__ == '__main__':
         Twitch.run_streams()
     if options.featured:
         Twitch.run_featured()
+    if options.plot:
+        run_plot()

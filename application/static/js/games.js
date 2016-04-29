@@ -3,7 +3,9 @@ $(document).ready(function() {
 	var games = new Bloodhound({
           datumTokenizer: Bloodhound.tokenizers.obj.whitespace('game'),
           queryTokenizer: Bloodhound.tokenizers.whitespace,
-          identify: function(obj) { return obj.game; },
+          identify: function(obj) {
+              return obj.game;
+          },
           prefetch: './static/games.json'
         });
         

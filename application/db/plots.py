@@ -13,7 +13,7 @@ import datetime
 def set_plotly_creds():
     """ plot.ly credentials for streaming API
 
-    :return: None
+    :return: (list) stream keys
     """
     plotly.tools.set_credentials_file(username=app.config['PLOTLY_NAME'], api_key=app.config['PLOTLY_API'])
     plotly.tools.set_credentials_file(app.config['STREAM_KEY'])
@@ -241,7 +241,7 @@ def time_series(online=False):
 def create_stream_model(stream_ids, name):
     """ creates plot and a list of stream objects with identifiers
 
-    :param online: (boolean) flag for posting to plot.ly
+    :param name: (string) name of game
     :param stream_ids: (list) list of stream id api keys
     :return: (list) list of dict of stream objects
     """
@@ -347,11 +347,8 @@ def stream_model_data(stream):
         y = 0 if actual == 0 else abs((predicted - actual) / actual) * 100
         stream[2]['stream_obj'].write(dict(x=x, y=y))
 
-        time.sleep(15)
-        print (x - start).total_seconds()/float(60)
-
-        if (x - start).total_seconds()/float(60) > 60 * 60:
-            break
+        time.sleep(60)
+        print 'streaming: ', (x - start).total_seconds()/float(60)
 
 
 def run_plot():

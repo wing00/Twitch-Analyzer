@@ -1,9 +1,11 @@
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import LinearRegression, SGDRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder, Normalizer
 from sklearn.base import TransformerMixin, BaseEstimator
 from sklearn.pipeline import FeatureUnion
+from sklearn.grid_search import GridSearchCV
+from sklearn.cross_validation import KFold
 from sklearn.svm import SVR
+
 import numpy
 
 
@@ -11,6 +13,7 @@ class FFTTransformer(TransformerMixin, BaseEstimator):
     def __init__(self):
         self.model = LinearRegression()
         self.y_mean = None
+        self.normalize = Normalizer()
 
     def fit(self, X, y=None):
         X_train = self.make_waves(X)
@@ -42,10 +45,13 @@ class FFTTransformer(TransformerMixin, BaseEstimator):
 
     def predict(self, X):
         X_test = self.make_waves(X)
-        return self.model.predict(X_test) + self.y_mean
+        X_test = self.model.predict(X_test) + self.y_mean
+        return X_test.reshape(-1, 1)
 
     def transform(self, X, y=None):
-        return [[item] for item in self.predict(X)]
+        X_test = self.predict(X)
+        X_test = self.normalize.fit_transform(X_test)
+        return X_test.reshape(-1, 1)
 
 
 class FillTransformer(TransformerMixin, BaseEstimator):
@@ -135,6 +141,20 @@ class BinaryTransformer(TransformerMixin, BaseEstimator):
         return self.predict(X)
 
 
+class RollingKFold(KFold):
+    def __iter__(self):
+        ind = numpy.arange(self.n)
+        n_folds = self.n_folds
+        fold_sizes = (self.n // n_folds) * numpy.ones(n_folds, dtype=numpy.int)
+        fold_sizes[:self.n % n_folds] += 1
+
+        for index in xrange(1, len(fold_sizes)):
+            i = sum(fold_sizes[:index])
+            train_index = ind[:i]
+            test_index = ind[i:]
+            yield train_index, test_index
+
+
 class SVRTransformer(TransformerMixin, BaseEstimator):
     def __init__(self):
         self.master = FeatureUnion([
@@ -154,14 +174,48 @@ class SVRTransformer(TransformerMixin, BaseEstimator):
 
             ('genres', FillTransformer('genres')),
             ('ratings', FillTransformer('ratings')),
-            ('platforms', FillTransformer('platforms'))
+            ('platforms', FillTransformer('platforms')),
+
+            ('times', FFTTransformer())
         ],
             n_jobs=-1)
 
-        self.model = SVR()
+        self.model = None
+
+    def process(self, X):
+        data = dict(zip([
+            'channelid',
+            'language',
+            'scheduled',
+            'featured',
+            'mature',
+            'partner',
+            'sponsored',
+            'games',
+            'genres',
+            'ratings',
+            'platforms',
+            'followers',
+            'videos',
+            'teams',
+            'times',
+            'viewers'
+            ],
+            zip(*X)
+        ))
+        return data, data['viewers']
 
     def fit(self, X, y=None):
-        X_train = self.master.fit_transform(X)
+        X_train = self.master.fit_transform(X, y)
+        self.model = GridSearchCV(
+            estimator=SVR(),
+            cv=RollingKFold(X_train.shape[0]),
+            param_grid=dict(
+                C=numpy.logspace(0.1, 10, base=2),
+                kernel=['rbf', 'linear', 'poly'],
+            ),
+            n_jobs=-1,
+        )
         self.model.fit(X_train, y)
         return self
 
@@ -172,28 +226,8 @@ class SVRTransformer(TransformerMixin, BaseEstimator):
     def transform(self, X, y=None):
         return [[item] for item in self.predict(X)]
 
-
-class StreamTransformer(TransformerMixin, BaseEstimator):
-    def __init__(self):
-        self.master = Pipeline([
-            ('grandunion', FeatureUnion([
-                ('svr', SVRTransformer()),
-                ('times', FFTTransformer())
-            ], n_jobs=-1)
-            ),
-
-            ('line', SGDRegressor())
-        ])
-
-    def process(self, X):
-        data = dict(zip(
-            ['channelid', 'language', 'scheduled', 'featured', 'mature', 'partner', 'sponsored', 'games', 'genres',
-             'ratings', 'platforms', 'followers', 'videos', 'teams', 'times', 'viewers'], zip(*X)))
-        return data, data['viewers']
-
-    def fit(self, X, y=None):
-        self.master.fit(X, y)
-        return self
+    def best_param(self):
+        return self.model.best_params_
 
     def get_max(self, X_test, X, num=1):
         return sorted(zip(self.predict(X_test), X), key=lambda x: -x[0])[:num]
@@ -201,8 +235,3 @@ class StreamTransformer(TransformerMixin, BaseEstimator):
     def score(self, X, y):
         return self.predict(X) - numpy.array(y).T
 
-    def predict(self, X, y=None):
-        return numpy.array([numpy.array([item if item > 0 else 0]) for item in self.master.predict(X)])
-
-    def transform(self, X, y=None):
-        return self.predict(X)

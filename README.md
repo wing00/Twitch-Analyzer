@@ -26,3 +26,40 @@ Twitch Ex Machina needs some api keys to run
 * STREAM_KEY=['hunter2', 'hunter2', 'hunter2', ...],
 
 
+## Calling db updates
+
+Call these functions with heroku scheduler or a worker
+
+**Games Update**
+* python application/db -g
+* 10 minutes
+
+**Features Update**
+* python application/db -f
+* hourly
+
+**Streams Update** 
+* python application/db -t
+* hourly
+* Lots of data here (200000+ streams)
+
+## Calling machine model updates
+
+**Time Models****
+* python application/machine -p 
+* daily
+
+**Full model****
+* python application/machine -f
+* weekly
+
+## Calling plot updates
+
+**Summary Plots**
+* python application/db -p
+* weekly
+
+**Time Model Plots**
+* python application/machine -t 20
+* weekly
+
