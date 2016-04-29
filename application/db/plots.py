@@ -324,7 +324,7 @@ def stream_model_data(stream):
     :return: None
     """
     name = stream[1]['name']
-    starscream = dill.load(open('./models/' + CLEANNAME.sub('', name) + '.dill', mode='rb+'))
+    starscream = dill.load(open('application/models/' + CLEANNAME.sub('', name) + '.dill', mode='rb+'))
 
     map(lambda x: stream[x]['stream_obj'].open(), range(3))
     print('streams open')
