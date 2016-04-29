@@ -328,95 +328,30 @@ def stream_model_data(stream):
     starscream = dill.load(open('application/models/' + CLEANNAME.sub('', name) + '.dill', mode='rb+'))
 
     map(lambda x: stream[x]['stream_obj'].open(), range(3))
-    print('streams open')
-    # feeding data to plot
-    counter = 0
+
+    start = datetime.datetime.now()
 
     while True:
         twitch = Twitch.run_live()
+
         actual = [item['viewers'] for item in twitch if name == item['name']][0]
-        predicted = starscream.predict([datetime.datetime.now()])[0]
+        predicted = starscream.predict(dict(times=[datetime.datetime.now()]))[0]
 
         x = datetime.datetime.now()
         y = predicted
         stream[0]['stream_obj'].write(dict(x=x, y=y))
+
         y = actual
         stream[1]['stream_obj'].write(dict(x=x, y=y))
-        y = 0 if actual == 0 else abs((predicted - actual)/actual)*100
+
+        y = 0 if actual == 0 else abs((predicted - actual) / actual) * 100
         stream[2]['stream_obj'].write(dict(x=x, y=y))
 
-        time.sleep(0.5)
-        counter += 1
-        if counter % 10 == 0:
-            print(counter)
+        time.sleep(15)
+        print (x - start).total_seconds()/float(60)
 
-
-def create_stream_plot(stream_ids, online):
-    """ creates plot and a list of stream objects with identifiers
-
-    :param online: (boolean) flag for posting to plot.ly
-    :param stream_ids: (list) list of stream id api keys
-    :return: (list) list of dict of stream objects
-    """
-
-    data = []
-    stream = []
-    twitch = Twitch.run_live()
-
-    # creating plot
-    for index, stream_id in enumerate(stream_ids):
-        trace = dict(
-            x=datetime.datetime.now(),
-            y=twitch[index]['viewers'],
-            type='scatter',
-            name=twitch[index]['name'],
-            stream=dict(token=stream_id)
-        )
-
-        data.append(trace)
-        stream.append(dict(stream_obj=plotly.plotly.Stream(stream_id),
-                           name=twitch[index]['name'],
-                           stream_id=stream_id
-                           )
-                      )
-
-    layout = dict(title='Streaming')
-    fig = dict(data=data, layout=layout)
-
-    if online:
-        url = plotly.plotly.plot(fig, filename='live')
-        with open('./templates/plots/live.html', mode='wb+') as f:
-            f.write(plotly.tools.get_embed(url))
-
-    return stream
-
-
-def stream_data(stream):
-    """ Opens stream for data input and sends data
-
-    :param stream: (list) list of dict of stream objects
-    :return: None
-    """
-
-    map(lambda x: stream[x]['stream_obj'].open(), range(len(stream)))
-
-    print('streams open')
-    # feeding data to plot
-    counter = 0
-
-    while True:
-        twitch = Twitch.run_live()
-
-        for data in stream:
-
-            x = datetime.datetime.now()
-            y = [item['viewers'] for item in twitch if data['name'] == item['name']][0]
-            data['stream_obj'].write(dict(x=x, y=y))
-
-        time.sleep(60)
-        counter += 1
-        if counter % 10 == 0:
-            print(counter)
+        if (x - start).total_seconds()/float(60) > 60 * 60:
+            break
 
 
 def run_plot():

@@ -65,6 +65,7 @@ def train_full_model():
 def train_time_model(name):
     """Gets the time data for game and trains a FFT model to it
 
+    :param name: name of the game
     """
     conn = server.connect()
     cur = conn.cursor()
@@ -88,14 +89,24 @@ def train_time_model(name):
 
 
 def make_json(gamelist):
+    """saves all models into dicts for use with typeahead
+
+    :param gamelist: list of games
+
+    """
     data = [dict(game=item) for item in gamelist]
     with open('./static/games.json', mode='wb+') as f:
         f.write(json.dumps(data, indent=4, separators=(',', ': ')))
 
 
-def run_time_model(num=10):
+def run_time_model(num=20):
+    """ trains time models
+
+    :param num: number of games to get
+    """
     gamelist = get.game_list(num)
     make_json(gamelist)
+
     pool = Pool()
     pool.map(train_time_model, gamelist)
     pool.close()

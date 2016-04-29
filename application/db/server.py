@@ -11,7 +11,6 @@ def connect():
 
     :return: (object) psycopg2 connect
     """
-
     conn = psycopg2.connect(
         database=app.config['DB_NAME'],
         user=app.config['DB_USER'],
