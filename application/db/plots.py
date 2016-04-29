@@ -2,6 +2,7 @@ from application import app
 from application.machine.train import CLEANNAME
 from multiprocessing import Pool
 import server
+from twitchapi import Twitch
 import plotly
 import time
 import numpy
@@ -332,7 +333,7 @@ def stream_model_data(stream):
     counter = 0
 
     while True:
-        twitch = server.Twitch.run_live()
+        twitch = Twitch.run_live()
         actual = [item['viewers'] for item in twitch if name == item['name']][0]
         predicted = starscream.predict([datetime.datetime.now()])[0]
 
@@ -360,7 +361,7 @@ def create_stream_plot(stream_ids, online):
 
     data = []
     stream = []
-    twitch = server.Twitch.run_live()
+    twitch = Twitch.run_live()
 
     # creating plot
     for index, stream_id in enumerate(stream_ids):
@@ -404,7 +405,7 @@ def stream_data(stream):
     counter = 0
 
     while True:
-        twitch = server.Twitch.run_live()
+        twitch = Twitch.run_live()
 
         for data in stream:
 

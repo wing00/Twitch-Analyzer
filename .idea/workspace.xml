@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4a1aca03-6fec-4892-afef-55fcd81f31b1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/db/plots.py" afterPath="$PROJECT_DIR$/application/db/plots.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/machine/get.py" afterPath="$PROJECT_DIR$/application/machine/get.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/machine/predict.py" afterPath="$PROJECT_DIR$/application/machine/predict.py" />
     </list>
     <ignored path="flask.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,16 +94,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,23 +101,6 @@
               <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plots.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/db/plots.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3857">
-              <caret line="332" column="0" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-                <marker date="1461896555000" expanded="true" signature="900:1208" placeholder="SELECT missi... missing_value" />
-                <marker date="1461896555000" expanded="true" signature="1481:1999" placeholder="SELECT platf... platformbomb" />
-                <marker date="1461896555000" expanded="true" signature="3578:3618" placeholder="SELECT name,... game_name" />
-                <marker date="1461896555000" expanded="true" signature="5165:5291" placeholder="SELECT name,... snapshot" />
-                <marker date="1461896555000" expanded="true" signature="6928:7084" placeholder="SELECT stamp... snapshot" />
               </folding>
             </state>
           </provider>
@@ -141,35 +116,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/machine/train.py">
+      <file leaf-file-name="get.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/machine/get.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+            <state relative-caret-position="452">
+              <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
-                <marker date="1461889534000" expanded="true" signature="379:2023" placeholder="SELECT strea... stream" />
-                <marker date="1461889534000" expanded="true" signature="810:960" placeholder="SELECT array... genrebomb" />
-                <marker date="1461889534000" expanded="true" signature="1114:1268" placeholder="SELECT array... ratingbomb" />
-                <marker date="1461889534000" expanded="true" signature="1422:1730" placeholder="SELECT array... platformbomb" />
-                <marker date="1461889534000" expanded="true" signature="2505:2652" placeholder="SELECT stamp... snapshot" />
+                <element signature="e#0#33#0" expanded="true" />
+                <marker date="1461897081000" expanded="true" signature="306:409" placeholder="SELECT name game_name" />
+                <marker date="1461897081000" expanded="true" signature="745:2602" placeholder="SELECT array... stream" />
+                <marker date="1461897081000" expanded="true" signature="1475:1573" placeholder="SELECT genre... genrebomb" />
+                <marker date="1461897081000" expanded="true" signature="1760:1862" placeholder="SELECT ratin... ratingbomb" />
+                <marker date="1461897081000" expanded="true" signature="2049:2310" placeholder="SELECT platf... platformbomb" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/machine/get.py">
+      <file leaf-file-name="plots.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/db/plots.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="275">
+              <caret line="363" column="28" selection-start-line="363" selection-start-column="20" selection-end-line="363" selection-end-column="28" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
-                <marker date="1461890675000" expanded="true" signature="329:432" placeholder="SELECT name game_name" />
-                <marker date="1461890675000" expanded="true" signature="759:2616" placeholder="SELECT array... stream" />
-                <marker date="1461890675000" expanded="true" signature="1489:1587" placeholder="SELECT genre... genrebomb" />
-                <marker date="1461890675000" expanded="true" signature="1774:1876" placeholder="SELECT ratin... ratingbomb" />
-                <marker date="1461890675000" expanded="true" signature="2063:2324" placeholder="SELECT platf... platformbomb" />
+                <element signature="e#0#27#0" expanded="true" />
+                <marker date="1461897081000" expanded="true" signature="929:1237" placeholder="SELECT missi... missing_value" />
+                <marker date="1461897081000" expanded="true" signature="1510:2028" placeholder="SELECT platf... platformbomb" />
+                <marker date="1461897081000" expanded="true" signature="3607:3647" placeholder="SELECT name,... game_name" />
+                <marker date="1461897081000" expanded="true" signature="5194:5320" placeholder="SELECT name,... snapshot" />
+                <marker date="1461897081000" expanded="true" signature="6957:7113" placeholder="SELECT stamp... snapshot" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="twitchapi.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/db/twitchapi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-795">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="predict.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/machine/predict.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-225">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+                <marker date="1461897081000" expanded="true" signature="502:661" placeholder="SELECT stamp... snapshot" />
+                <marker date="1461897081000" expanded="true" signature="1185:2933" placeholder="SELECT strea... stream" />
+                <marker date="1461897081000" expanded="true" signature="1632:1790" placeholder="SELECT array... genrebomb" />
+                <marker date="1461897081000" expanded="true" signature="1960:2122" placeholder="SELECT array... ratingbomb" />
+                <marker date="1461897081000" expanded="true" signature="2292:2616" placeholder="SELECT array... platformbomb" />
+                <marker date="1461897081000" expanded="true" signature="4499:4646" placeholder="SELECT stamp... snapshot" />
               </folding>
             </state>
           </provider>
@@ -230,19 +233,19 @@
         <option value="$PROJECT_DIR$/application/test.py" />
         <option value="$PROJECT_DIR$/application/machine.py" />
         <option value="$PROJECT_DIR$/application/db/twitchapi.py" />
-        <option value="$PROJECT_DIR$/application/machine/predict.py" />
         <option value="$PROJECT_DIR$/application/machine/train.py" />
         <option value="$PROJECT_DIR$/application/__init__.py" />
         <option value="$PROJECT_DIR$/application/models.py" />
         <option value="$PROJECT_DIR$/application/db_create.py" />
         <option value="$PROJECT_DIR$/application/db/create.py" />
-        <option value="$PROJECT_DIR$/application/machine/get.py" />
         <option value="$PROJECT_DIR$/redis.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/application/views.py" />
         <option value="$PROJECT_DIR$/worker.py" />
+        <option value="$PROJECT_DIR$/application/machine/predict.py" />
+        <option value="$PROJECT_DIR$/application/machine/get.py" />
         <option value="$PROJECT_DIR$/application/db/plots.py" />
       </list>
     </option>
@@ -1082,16 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/db/twitchapi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#27#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/db/update.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1545">
@@ -1223,22 +1216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/machine/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-            <marker date="1461889400000" expanded="true" signature="325:484" placeholder="SELECT stamp... snapshot" />
-            <marker date="1461889400000" expanded="true" signature="986:2734" placeholder="SELECT strea... stream" />
-            <marker date="1461889400000" expanded="true" signature="1433:1591" placeholder="SELECT array... genrebomb" />
-            <marker date="1461889400000" expanded="true" signature="1761:1923" placeholder="SELECT array... ratingbomb" />
-            <marker date="1461889400000" expanded="true" signature="2093:2417" placeholder="SELECT array... platformbomb" />
-            <marker date="1461889400000" expanded="true" signature="4096:4243" placeholder="SELECT stamp... snapshot" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/machine/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -1250,21 +1227,6 @@
             <marker date="1461889534000" expanded="true" signature="1114:1268" placeholder="SELECT array... ratingbomb" />
             <marker date="1461889534000" expanded="true" signature="1422:1730" placeholder="SELECT array... platformbomb" />
             <marker date="1461889534000" expanded="true" signature="2505:2652" placeholder="SELECT stamp... snapshot" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/machine/get.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-            <marker date="1461890675000" expanded="true" signature="329:432" placeholder="SELECT name game_name" />
-            <marker date="1461890675000" expanded="true" signature="759:2616" placeholder="SELECT array... stream" />
-            <marker date="1461890675000" expanded="true" signature="1489:1587" placeholder="SELECT genre... genrebomb" />
-            <marker date="1461890675000" expanded="true" signature="1774:1876" placeholder="SELECT ratin... ratingbomb" />
-            <marker date="1461890675000" expanded="true" signature="2063:2324" placeholder="SELECT platf... platformbomb" />
           </folding>
         </state>
       </provider>
@@ -1344,18 +1306,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/db/plots.py">
+    <entry file="file://$PROJECT_DIR$/application/machine/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3857">
-          <caret line="332" column="0" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
+        <state relative-caret-position="-225">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
-            <marker date="1461896555000" expanded="true" signature="900:1208" placeholder="SELECT missi... missing_value" />
-            <marker date="1461896555000" expanded="true" signature="1481:1999" placeholder="SELECT platf... platformbomb" />
-            <marker date="1461896555000" expanded="true" signature="3578:3618" placeholder="SELECT name,... game_name" />
-            <marker date="1461896555000" expanded="true" signature="5165:5291" placeholder="SELECT name,... snapshot" />
-            <marker date="1461896555000" expanded="true" signature="6928:7084" placeholder="SELECT stamp... snapshot" />
+            <marker date="1461897081000" expanded="true" signature="502:661" placeholder="SELECT stamp... snapshot" />
+            <marker date="1461897081000" expanded="true" signature="1185:2933" placeholder="SELECT strea... stream" />
+            <marker date="1461897081000" expanded="true" signature="1632:1790" placeholder="SELECT array... genrebomb" />
+            <marker date="1461897081000" expanded="true" signature="1960:2122" placeholder="SELECT array... ratingbomb" />
+            <marker date="1461897081000" expanded="true" signature="2292:2616" placeholder="SELECT array... platformbomb" />
+            <marker date="1461897081000" expanded="true" signature="4499:4646" placeholder="SELECT stamp... snapshot" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/machine/get.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <marker date="1461897081000" expanded="true" signature="306:409" placeholder="SELECT name game_name" />
+            <marker date="1461897081000" expanded="true" signature="745:2602" placeholder="SELECT array... stream" />
+            <marker date="1461897081000" expanded="true" signature="1475:1573" placeholder="SELECT genre... genrebomb" />
+            <marker date="1461897081000" expanded="true" signature="1760:1862" placeholder="SELECT ratin... ratingbomb" />
+            <marker date="1461897081000" expanded="true" signature="2049:2310" placeholder="SELECT platf... platformbomb" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/db/plots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="363" column="28" selection-start-line="363" selection-start-column="20" selection-end-line="363" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+            <marker date="1461897081000" expanded="true" signature="929:1237" placeholder="SELECT missi... missing_value" />
+            <marker date="1461897081000" expanded="true" signature="1510:2028" placeholder="SELECT platf... platformbomb" />
+            <marker date="1461897081000" expanded="true" signature="3607:3647" placeholder="SELECT name,... game_name" />
+            <marker date="1461897081000" expanded="true" signature="5194:5320" placeholder="SELECT name,... snapshot" />
+            <marker date="1461897081000" expanded="true" signature="6957:7113" placeholder="SELECT stamp... snapshot" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/db/twitchapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-795">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

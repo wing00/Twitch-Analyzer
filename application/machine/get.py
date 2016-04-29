@@ -13,21 +13,20 @@ def game_list(num=10):
     """
     conn = server.connect()
     cur = conn.cursor()
-    row = {'num': num}
 
     query = ''' SELECT name FROM game_name
                   ORDER BY viewer_total DESC
                   LIMIT %(num)s
                 '''
 
-    cur.execute(query, row)
+    cur.execute(query, dict(num=num))
     gamelist = cur.fetchall()
     conn.close()
 
     return [item[0] for item in gamelist]
 
 
-def ranges():
+def range():
     """calculates all possible combinations of parameters and writes to json file
     """
     conn = server.connect()
@@ -77,15 +76,14 @@ def ranges():
 
     conn.close()
 
-    starscream = dill.load(open('models/full.dill', mode='rb+'))
+    starscream = dill.load(open('application/models/full.dill', mode='rb+'))
     data, viewers = starscream.process(fetch)
-
     data['followers'] = [range(data['followers'][0] + 1)]
     data['videos'] = [range(data['videos'][0] + 1)]
     data['teams'] = [range(data['teams'][0] + 1)]
     data['times'] = [[datetime.datetime.date()]]
     data['viewers'] = [[data['viewers'][0]]]
 
-    with open('models/range.json', mode='wb+') as f:
+    with open('application/models/range.json', mode='wb+') as f:
         f.write(json.dumps(data, indent=4, separators=(',', ': ')))
 

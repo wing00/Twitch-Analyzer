@@ -10,9 +10,14 @@ import plotly
 
 
 def predict_time_model(name):
+    """function to generate predicted time values
+
+    :param name: name of the game
+    :return times, viewers, machine, name: list of times, viewer count, predicted viewers, name of the game
+
+    """
     conn = server.connect()
     cur = conn.cursor()
-    row = {'name': name}
 
     query = '''SELECT stamp, viewers FROM snapshot
                    WHERE stamp >= '2016-04-07'
@@ -20,12 +25,12 @@ def predict_time_model(name):
                    ORDER BY stamp ASC
             '''
 
-    cur.execute(query, row)
+    cur.execute(query, dict(name=name))
     fetch = cur.fetchall()
     conn.close()
 
     data = dict(zip(['times', 'viewers'], zip(*fetch)))
-    starscream = dill.load(open('./models/' + CLEANNAME.sub('', name) + '.dill', mode='rb+'))
+    starscream = dill.load(open('application/models/' + CLEANNAME.sub('', name) + '.dill', mode='rb+'))
 
     machine = starscream.predict(data)
     return data['times'], data['viewers'], machine, name
@@ -88,6 +93,12 @@ def predict_model():
 
 def plot_predict(param):
     """plotly graph of actual versus machine fit data
+
+    :param param: tuple
+        times: list of times
+        viewers: list of viewer counts
+        machine: list of predicted viewers
+        name: name of the game
     """
     times, viewers, machine, name = param
     data = [
@@ -100,7 +111,6 @@ def plot_predict(param):
                 color='#FF7F0E'
             )
         ),
-
         dict(
             x=times,
             y=machine,
@@ -111,7 +121,6 @@ def plot_predict(param):
             )
         ),
     ]
-
     layout = dict(
         title=name,
         titlefont=dict(
@@ -119,13 +128,15 @@ def plot_predict(param):
         ),
         showlegend=True
     )
-
     fig = dict(data=data, layout=layout)
     plotly.plotly.image.save_as(fig, filename='static/img/model/' + CLEANNAME.sub('', name), format='png')
 
 
 def plot_fft(name='Dota 2'):
-    """creates plot for fourier transform"""
+    """creates plot for fourier transform
+
+    :param name: name of the game
+    """
 
     conn = server.connect()
     cur = conn.cursor()
