@@ -10,7 +10,7 @@ def create_stream(name):
 
     try:
         queue = Queue(connection=conn)
-        queue.enqueue(plots.stream_model_data, stream, timeout=60*60)
+        queue.enqueue(plots.stream_model_data, stream)
 
     except ConnectionError:
         pass

@@ -50,7 +50,6 @@ def train_full_model():
 
                        WHERE stamp >= '2016-04-07'
                        ORDER BY stamp ASC
-                       LIMIT 1000
         '''
 
     cur.execute(query)
