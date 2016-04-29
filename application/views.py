@@ -1,5 +1,8 @@
 from flask import render_template, request, redirect
 from application import app, models
+from application.db import plots
+from worker import conn
+from rq import Queue
 
 
 @app.route('/')
@@ -32,14 +35,14 @@ def redirect_model():
 def model():
     if request.method == 'POST':
         forms = request.form
-
-        div, stream = models.create_stream(forms['game'])
-        params = dict(game=forms['game'], div=div)
-
-        return render_template('models.html', params=params)
-
+        name = forms['game']
     else:
-        div = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~styoung/94.embed" height="525" width="100%"></iframe>'
-        params = dict(game='League of Legends', div=div)
+        name = 'League of Legends'
 
-        return render_template('models.html', params=params)
+    div, stream = models.create_stream(name)
+    params = dict(game=name, div=div)
+
+    queue = Queue(connection=conn)
+    queue.enqueue(plots.stream_model_data, stream)
+
+    return render_template('models.html', params=params)
