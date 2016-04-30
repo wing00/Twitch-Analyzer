@@ -31,10 +31,19 @@ def redirect_model():
 def model():
     if request.method == 'POST':
         name = request.form['game']
+        if models.check_list(name):
+            div = models.create_stream(name)
+
+        else:
+            name = 'League of Legends'
+            div = '<div class="error"><h3>No Game Found</h3></div>'
+
+        params = dict(game=name, div=div)
+        return render_template('models.html', params=params)
     else:
         name = 'League of Legends'
+        div = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~styoung/94.embed" height="525" width="100%"></iframe>'
 
-    div = models.create_stream(name)
-    params = dict(game=name, div=div)
 
-    return render_template('models.html', params=params)
+        params = dict(game=name, div=div)
+        return render_template('models.html', params=params)

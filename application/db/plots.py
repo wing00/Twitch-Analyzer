@@ -125,7 +125,7 @@ def all_time(online=False):
 
     total = sum(value for name, value in rows)
     new_rows = sorted([(name[:17], value) for name, value in rows if value > 0.005 * total], key=lambda x: x[1])
-               #+ [('Other', sum(value for name, value in rows if value <= 0.01 * total))]
+    # + [('Other', sum(value for name, value in rows if value <= 0.01 * total))]
 
     label, values = zip(*new_rows)
     data = [dict(
@@ -248,6 +248,7 @@ def create_stream_model(stream_ids, name):
 
     starscream = dill.load(open('application/models/' + CLEANNAME.sub('', name) + '.dill', mode='rb'))
 
+    print 'loaded model'
     conn = server.connect()
     cur = conn.cursor()
 
@@ -259,11 +260,12 @@ def create_stream_model(stream_ids, name):
 
     cur.execute(query, dict(name=name))
     fetch = cur.fetchall()
-    times, actual = zip(*fetch)
     conn.close()
 
-    predicted = starscream.predict(dict(times=times))
+    print 'loaded data'
 
+    times, actual = zip(*fetch)
+    predicted = starscream.predict(dict(times=times))
     data = [
         dict(
             x=times,
@@ -300,7 +302,7 @@ def create_stream_model(stream_ids, name):
 
         dict(
             stream_obj=plotly.plotly.Stream(stream_ids[1]),
-            name=name,
+            name='Viewers',
             stream_id=stream_ids[1]
            ),
 
@@ -311,8 +313,9 @@ def create_stream_model(stream_ids, name):
             )
         ]
 
-    layout = dict(title='Streaming')
+    layout = dict(title=name)
     fig = dict(data=data, layout=layout)
+    print 'loaded plot'
 
     url = plotly.plotly.plot(fig, filename='model', auto_open=False)
     return plotly.tools.get_embed(url), stream
@@ -379,4 +382,6 @@ def run_stream(name):
 
 
 if __name__ == '__main__':
-    pass
+    from os import chdir
+    chdir('../..')
+    run_stream('League of Legends')
