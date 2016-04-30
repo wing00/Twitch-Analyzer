@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
 from twitchapi import Twitch
-from plots import run_plot, r
+from plots import run_plot
 
 
 def parse_options():
